@@ -4,7 +4,7 @@ import logoEpice from "@/assets/logo-epice.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Dark background with gradient */}
       <div className="absolute inset-0 z-0 bg-black">
         <div className="absolute inset-0 bg-[var(--gradient-hero)] opacity-40" />

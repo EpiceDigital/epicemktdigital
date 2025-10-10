@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Methodology from "@/components/Methodology";
 import Cases from "@/components/Cases";
@@ -8,6 +9,7 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen dark">
+      <Navbar />
       <Hero />
       <Methodology />
       <Cases />
