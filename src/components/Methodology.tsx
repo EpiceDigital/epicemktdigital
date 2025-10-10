@@ -24,10 +24,10 @@ const Methodology = () => {
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 text-white">
             Conheça a nossa metodologia
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
             Criamos uma estrutura que se retroalimenta, sempre gerando demanda, focando em vender e reter mais clientes dentro da sua base.
           </p>
         </div>
