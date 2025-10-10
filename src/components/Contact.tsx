@@ -26,15 +26,12 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-24">
+    <section className="py-24 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            Vamos conversar?
+            Preencha o formulário e entre em contato com o nosso time
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Conte-nos sobre seu projeto e descubra como podemos ajudar
-          </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">

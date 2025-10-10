@@ -1,36 +1,36 @@
 import { Card } from "@/components/ui/card";
-import { Search, Users, Palette, TrendingUp, Megaphone, BarChart3 } from "lucide-react";
+import { Video, Palette, PenTool, Users, TrendingUp, Target } from "lucide-react";
 
 const services = [
   {
-    icon: Search,
-    title: "SEO & SEM",
-    description: "Posicione sua marca no topo dos resultados de busca e maximize sua visibilidade online.",
+    icon: Video,
+    title: "Audiovisual",
+    description: "Vídeos e fotos profissionais para destacar sua marca e aumentar o engajamento. Produção completa, do roteiro, à captação à edição final.",
+  },
+  {
+    icon: Palette,
+    title: "Design",
+    description: "Identidade visual e peças gráficas criadas para chamar atenção e transmitir credibilidade.",
+  },
+  {
+    icon: PenTool,
+    title: "Copywriting",
+    description: "Textos persuasivos para anúncios, sites e campanhas. Escrevemos para vender mais.",
   },
   {
     icon: Users,
     title: "Social Media",
-    description: "Construa uma presença marcante nas redes sociais e engaje seu público de forma autêntica.",
-  },
-  {
-    icon: Palette,
-    title: "Branding & Design",
-    description: "Crie uma identidade visual única que reflita a essência da sua marca.",
+    description: "Gestão de redes sociais com conteúdo estratégico e frequente para atrair e engajar seu público.",
   },
   {
     icon: TrendingUp,
-    title: "Growth Marketing",
-    description: "Estratégias baseadas em dados para acelerar o crescimento do seu negócio.",
+    title: "Tráfego Pago (Meta e Google)",
+    description: "Anúncios segmentados para gerar resultados rápidos e aumentar suas vendas.",
   },
   {
-    icon: Megaphone,
-    title: "Publicidade Digital",
-    description: "Campanhas pagas otimizadas para máximo retorno sobre investimento.",
-  },
-  {
-    icon: BarChart3,
-    title: "Analytics & BI",
-    description: "Insights profundos através de análise de dados e inteligência de negócios.",
+    icon: Target,
+    title: "Estratégia",
+    description: "Atuamos como um verdadeiro sócio na sua empresa, não só te entregando o serviço em si, mas também construindo estratégias lucrativas.",
   },
 ];
 
@@ -40,11 +40,8 @@ const Services = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            Nossos serviços
+            Conheça nossos principais serviços
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Soluções completas de marketing digital para transformar sua presença online
-          </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

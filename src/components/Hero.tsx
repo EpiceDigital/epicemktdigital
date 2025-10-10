@@ -22,49 +22,23 @@ const Hero = () => {
 
       {/* Content */}
       <div className="container mx-auto px-4 z-10 text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted/50 backdrop-blur-sm border border-border mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
-          <Sparkles className="h-4 w-4 text-primary" />
-          <span className="text-sm font-medium">Transforme sua presença digital</span>
-        </div>
-
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">
-          Impulse sua marca
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">
+          Um departamento de marketing
           <br />
-          <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-            ao próximo nível
+          <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+            moldado para sua empresa.
           </span>
         </h1>
 
-        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
-          Estratégias de marketing digital inovadoras que geram resultados reais. 
-          Da criação à conversão, estamos com você.
+        <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
+          Montamos uma equipe 360° que respira o seu negócio, entende seus objetivos e constrói estratégias que funcionam para o crescimento da sua empresa.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
-          <Button variant="hero" size="lg" className="group">
-            Começar agora
+        <div className="flex justify-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
+          <Button variant="hero" size="lg" className="group uppercase font-bold">
+            Quero o meu departamento de marketing
             <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </Button>
-          <Button variant="outline" size="lg">
-            Ver cases de sucesso
-          </Button>
-        </div>
-
-        {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500">
-          {[
-            { value: "250+", label: "Clientes ativos" },
-            { value: "98%", label: "Satisfação" },
-            { value: "300%", label: "ROI médio" },
-            { value: "5 anos", label: "De mercado" },
-          ].map((stat) => (
-            <div key={stat.label} className="text-center">
-              <div className="text-3xl md:text-4xl font-display font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-                {stat.value}
-              </div>
-              <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
-            </div>
-          ))}
         </div>
       </div>
     </section>

@@ -1,17 +1,17 @@
 import Hero from "@/components/Hero";
-import Services from "@/components/Services";
-import About from "@/components/About";
+import Methodology from "@/components/Methodology";
 import Cases from "@/components/Cases";
+import Services from "@/components/Services";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen dark">
       <Hero />
-      <Services />
-      <About />
+      <Methodology />
       <Cases />
+      <Services />
       <Contact />
       <Footer />
     </div>
