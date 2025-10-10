@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
-import heroImage from "@/assets/hero-bg.jpg";
+import { ArrowRight, Infinity } from "lucide-react";
+import logoEpice from "@/assets/logo-epice.jpg";
 
 const Hero = () => {
   return (
@@ -10,8 +10,23 @@ const Hero = () => {
         <div className="absolute inset-0 bg-[var(--gradient-hero)] opacity-40" />
       </div>
 
+      {/* Floating infinity symbols */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <Infinity className="absolute top-20 left-10 w-32 h-32 text-primary/10 animate-pulse" style={{ animationDuration: '4s' }} />
+        <Infinity className="absolute bottom-40 right-20 w-40 h-40 text-accent/10 animate-pulse" style={{ animationDuration: '5s', animationDelay: '1s' }} />
+        <Infinity className="absolute top-1/2 left-1/4 w-24 h-24 text-secondary/10 animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }} />
+      </div>
+
       {/* Content */}
       <div className="container mx-auto px-4 z-10 text-center">
+        {/* Logo */}
+        <div className="mb-8 animate-in fade-in slide-in-from-top duration-700">
+          <img 
+            src={logoEpice} 
+            alt="epice" 
+            className="h-24 md:h-32 mx-auto"
+          />
+        </div>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100 text-white">
           Um departamento de marketing
           <br />
