@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Video, Palette, PenTool, Users, TrendingUp, Target } from "lucide-react";
+import servicesBg from "@/assets/services-bg.jpg";
 
 const services = [
   {
@@ -36,8 +37,17 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="py-24 bg-black">
-      <div className="container mx-auto px-4">
+    <section className="py-24 bg-black relative overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 z-0 bg-cover bg-center"
+        style={{ 
+          backgroundImage: `url(${servicesBg})`,
+          opacity: 0.1
+        }}
+      />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 text-white">
             Conheça nossos principais serviços

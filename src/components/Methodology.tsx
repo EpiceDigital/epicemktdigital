@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import methodologyBg from "@/assets/methodology-bg.jpg";
 
 const steps = [
   {
@@ -21,8 +22,17 @@ const steps = [
 
 const Methodology = () => {
   return (
-    <section className="py-24 bg-black">
-      <div className="container mx-auto px-4">
+    <section className="py-24 bg-black relative overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 z-0 bg-cover bg-center"
+        style={{ 
+          backgroundImage: `url(${methodologyBg})`,
+          opacity: 0.1
+        }}
+      />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 text-white">
             Conheça a nossa metodologia

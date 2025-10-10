@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import contactBg from "@/assets/contact-bg.jpg";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -26,8 +27,17 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-24 bg-black">
-      <div className="container mx-auto px-4">
+    <section className="py-24 bg-black relative overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 z-0 bg-cover bg-center"
+        style={{ 
+          backgroundImage: `url(${contactBg})`,
+          opacity: 0.1
+        }}
+      />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">
             Entre em contato

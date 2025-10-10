@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
+import aboutBg from "@/assets/about-bg.jpg";
 
 const About = () => {
   const highlights = [
@@ -10,8 +11,17 @@ const About = () => {
   ];
 
   return (
-    <section className="py-24 bg-black">
-      <div className="container mx-auto px-4">
+    <section className="py-24 bg-black relative overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 z-0 bg-cover bg-center"
+        style={{ 
+          backgroundImage: `url(${aboutBg})`,
+          opacity: 0.08
+        }}
+      />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-in fade-in slide-in-from-left duration-700">
             <span className="text-primary font-semibold text-sm uppercase tracking-wider">
