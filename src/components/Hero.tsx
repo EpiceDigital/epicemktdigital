@@ -17,7 +17,7 @@ const Hero = () => {
           <img 
             src={logoEpice} 
             alt="epice" 
-            className="h-24 md:h-32 mx-auto"
+            className="h-32 md:h-40 lg:h-48 mx-auto"
           />
         </div>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100 text-white">
