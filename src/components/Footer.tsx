@@ -3,7 +3,7 @@ import logoEpice from "@/assets/logo-epice.jpg";
 
 const Footer = () => {
   return (
-    <footer className="bg-muted/30 border-t border-border">
+    <footer className="bg-black border-t border-border">
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
