@@ -29,9 +29,19 @@ const Contact = () => {
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 text-white">
-            Preencha o formulário e entre em contato com o nosso time
+          <span className="text-primary font-semibold text-sm uppercase tracking-wider">
+            Entre em contato
+          </span>
+          <h2 className="text-4xl md:text-5xl font-display font-bold mt-4 mb-4 text-white">
+            Preencha o formulário
+            <br />
+            <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+              e fale com nosso time
+            </span>
           </h2>
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+            Estamos prontos para ajudar sua empresa a crescer
+          </p>
         </div>
 
         <div className="max-w-2xl mx-auto">
