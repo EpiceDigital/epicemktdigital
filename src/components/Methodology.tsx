@@ -51,7 +51,7 @@ const Methodology = () => {
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="p-8 rounded-2xl bg-gradient-to-br from-card to-card/50 border-2 border-border hover:border-primary transition-all duration-300 hover:shadow-[var(--shadow-card)] h-full">
-                  <div className="text-5xl font-display font-bold text-primary/30 mb-4">
+                  <div className="text-5xl font-display font-bold text-primary mb-4">
                     {String(index + 1).padStart(2, '0')}
                   </div>
                   <h3 className="text-2xl font-bold mb-3 text-white">{step.title}</h3>
