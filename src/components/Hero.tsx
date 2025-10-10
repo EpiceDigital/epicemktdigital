@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Infinity } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import logoEpice from "@/assets/logo-epice.jpg";
 
 const Hero = () => {
@@ -8,13 +8,6 @@ const Hero = () => {
       {/* Dark background with gradient */}
       <div className="absolute inset-0 z-0 bg-black">
         <div className="absolute inset-0 bg-[var(--gradient-hero)] opacity-40" />
-      </div>
-
-      {/* Floating infinity symbols */}
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <Infinity className="absolute top-20 left-10 w-32 h-32 text-primary/10 animate-pulse" style={{ animationDuration: '4s' }} />
-        <Infinity className="absolute bottom-40 right-20 w-40 h-40 text-accent/10 animate-pulse" style={{ animationDuration: '5s', animationDelay: '1s' }} />
-        <Infinity className="absolute top-1/2 left-1/4 w-24 h-24 text-secondary/10 animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }} />
       </div>
 
       {/* Content */}

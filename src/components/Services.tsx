@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Video, Palette, PenTool, Users, TrendingUp, Target, Infinity } from "lucide-react";
+import { Video, Palette, PenTool, Users, TrendingUp, Target } from "lucide-react";
 
 const services = [
   {
@@ -36,16 +36,10 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="py-24 bg-muted/30 relative overflow-hidden">
-      {/* Floating infinity symbols */}
-      <div className="absolute inset-0 pointer-events-none">
-        <Infinity className="absolute top-10 right-10 w-24 h-24 text-primary/5 animate-pulse" style={{ animationDuration: '5s' }} />
-        <Infinity className="absolute bottom-20 left-20 w-32 h-32 text-accent/5 animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }} />
-      </div>
-      
-      <div className="container mx-auto px-4 relative z-10">
+    <section className="py-24 bg-muted/30">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 text-white">
             Conheça nossos principais serviços
           </h2>
         </div>
@@ -60,8 +54,8 @@ const Services = () => {
               <div className="w-14 h-14 rounded-2xl bg-[var(--gradient-card)] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <service.icon className="h-7 w-7 text-primary" />
               </div>
-              <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <h3 className="text-xl font-bold mb-3 text-white">{service.title}</h3>
+              <p className="text-gray-300 leading-relaxed">
                 {service.description}
               </p>
             </Card>

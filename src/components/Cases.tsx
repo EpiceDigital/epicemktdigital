@@ -44,6 +44,9 @@ const Cases = () => {
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 text-white">
             Conheça alguns de nossos principais cases
           </h2>
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+            Resultados reais de clientes que confiaram em nosso trabalho
+          </p>
         </div>
 
         <div className="relative max-w-5xl mx-auto mb-12">

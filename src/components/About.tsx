@@ -17,13 +17,13 @@ const About = () => {
             <span className="text-primary font-semibold text-sm uppercase tracking-wider">
               Sobre nós
             </span>
-            <h2 className="text-4xl md:text-5xl font-display font-bold mt-4 mb-6">
+            <h2 className="text-4xl md:text-5xl font-display font-bold mt-4 mb-6 text-white">
               Transformamos ideias em{" "}
               <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
                 resultados
               </span>
             </h2>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-lg text-gray-300 mb-8 leading-relaxed">
               Somos uma agência de marketing digital apaixonada por criar experiências 
               digitais que conectam marcas com pessoas. Nossa missão é impulsionar o 
               crescimento dos nossos clientes através de estratégias inovadoras e 
@@ -38,7 +38,7 @@ const About = () => {
                   style={{ animationDelay: `${(index + 1) * 100}ms` }}
                 >
                   <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-foreground">{highlight}</span>
+                  <span className="text-white">{highlight}</span>
                 </div>
               ))}
             </div>
@@ -55,8 +55,8 @@ const About = () => {
                   <div className="text-6xl font-display font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent mb-4">
                     250+
                   </div>
-                  <p className="text-xl font-semibold mb-2">Projetos entregues</p>
-                  <p className="text-muted-foreground">
+                  <p className="text-xl font-semibold mb-2 text-white">Projetos entregues</p>
+                  <p className="text-gray-300">
                     Com excelência e dedicação
                   </p>
                 </div>
