@@ -26,103 +26,59 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-24 bg-muted/30">
+    <section className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 text-white">
             Preencha o formulário e entre em contato com o nosso time
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Info */}
-          <div className="space-y-8 animate-in fade-in slide-in-from-left duration-700">
-            <div>
-              <h3 className="text-2xl font-bold mb-6">Entre em contato</h3>
-              <p className="text-muted-foreground mb-8">
-                Estamos prontos para ouvir suas ideias e transformá-las em realidade.
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[var(--gradient-card)] flex items-center justify-center flex-shrink-0">
-                  <Mail className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <div className="font-semibold mb-1">Email</div>
-                  <a href="mailto:contato@impulse.com.br" className="text-muted-foreground hover:text-primary transition-colors">
-                    contato@impulse.com.br
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[var(--gradient-card)] flex items-center justify-center flex-shrink-0">
-                  <Phone className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <div className="font-semibold mb-1">Telefone</div>
-                  <a href="tel:+5511999999999" className="text-muted-foreground hover:text-primary transition-colors">
-                    (11) 99999-9999
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[var(--gradient-card)] flex items-center justify-center flex-shrink-0">
-                  <MapPin className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <div className="font-semibold mb-1">Localização</div>
-                  <p className="text-muted-foreground">
-                    São Paulo, SP<br />
-                    Brasil
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
+        <div className="max-w-2xl mx-auto">
           {/* Contact Form */}
-          <Card className="p-8 border-2 animate-in fade-in slide-in-from-right duration-700">
+          <Card className="p-8 border-2 border-primary/30 bg-card/50 backdrop-blur-sm animate-in fade-in slide-in-from-bottom-4 duration-700">
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="space-y-2">
-                <Label htmlFor="name">Nome completo</Label>
-                <Input
-                  id="name"
-                  placeholder="Seu nome"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  required
-                />
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <Label htmlFor="name" className="text-gray-200">Nome completo</Label>
+                  <Input
+                    id="name"
+                    placeholder="Seu nome"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    required
+                    className="bg-background/50 border-border text-white placeholder:text-gray-500"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="email" className="text-gray-200">Email</Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    placeholder="seu@email.com"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    required
+                    className="bg-background/50 border-border text-white placeholder:text-gray-500"
+                  />
+                </div>
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="email">Email</Label>
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="seu@email.com"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  required
-                />
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="phone">Telefone</Label>
+                <Label htmlFor="phone" className="text-gray-200">Telefone</Label>
                 <Input
                   id="phone"
                   type="tel"
                   placeholder="(11) 99999-9999"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  className="bg-background/50 border-border text-white placeholder:text-gray-500"
                 />
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="message">Mensagem</Label>
+                <Label htmlFor="message" className="text-gray-200">Mensagem</Label>
                 <Textarea
                   id="message"
                   placeholder="Conte-nos sobre seu projeto..."
@@ -130,14 +86,54 @@ const Contact = () => {
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   required
+                  className="bg-background/50 border-border text-white placeholder:text-gray-500"
                 />
               </div>
 
-              <Button type="submit" variant="default" size="lg" className="w-full">
+              <Button type="submit" variant="hero" size="lg" className="w-full uppercase font-bold">
                 Enviar mensagem
               </Button>
             </form>
           </Card>
+
+          {/* Contact Info */}
+          <div className="mt-12 grid md:grid-cols-3 gap-6 text-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-12 h-12 rounded-xl bg-[var(--gradient-card)] flex items-center justify-center">
+                <Mail className="h-5 w-5 text-primary" />
+              </div>
+              <div>
+                <div className="font-semibold mb-1 text-white">Email</div>
+                <a href="mailto:contato@impulse.com.br" className="text-gray-300 hover:text-primary transition-colors text-sm">
+                  contato@impulse.com.br
+                </a>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-12 h-12 rounded-xl bg-[var(--gradient-card)] flex items-center justify-center">
+                <Phone className="h-5 w-5 text-primary" />
+              </div>
+              <div>
+                <div className="font-semibold mb-1 text-white">Telefone</div>
+                <a href="tel:+5511999999999" className="text-gray-300 hover:text-primary transition-colors text-sm">
+                  (11) 99999-9999
+                </a>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-12 h-12 rounded-xl bg-[var(--gradient-card)] flex items-center justify-center">
+                <MapPin className="h-5 w-5 text-primary" />
+              </div>
+              <div>
+                <div className="font-semibold mb-1 text-white">Localização</div>
+                <p className="text-gray-300 text-sm">
+                  São Paulo, SP • Brasil
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
