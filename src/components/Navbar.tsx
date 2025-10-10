@@ -23,18 +23,24 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  location.pathname === item.path ? "text-primary" : "text-gray-300"
-                }`}
+          <div className="hidden md:flex items-center gap-6">
+            <Link
+              to="/"
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                location.pathname === "/" ? "text-primary" : "text-gray-300"
+              }`}
+            >
+              Home
+            </Link>
+            <Link to="/lancamentos">
+              <Button 
+                variant={location.pathname === "/lancamentos" ? "default" : "hero"}
+                size="lg"
+                className="font-bold"
               >
-                {item.name}
-              </Link>
-            ))}
+                Lançamentos
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
