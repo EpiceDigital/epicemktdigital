@@ -18,7 +18,7 @@ const Navbar = () => {
           <div className="flex items-center gap-3 md:gap-6">
             <Link
               to="/"
-              className={`text-sm font-medium transition-colors hover:text-primary hidden md:block ${
+              className={`text-sm font-medium transition-colors hover:text-primary ${
                 location.pathname === "/" ? "text-primary" : "text-gray-300"
               }`}
             >
