@@ -15,20 +15,21 @@ const Navbar = () => {
           </Link>
 
           {/* Navigation - Always visible */}
-          <div className="flex items-center gap-3 md:gap-6">
-            <Link
-              to="/"
-              className={`text-sm font-medium transition-colors hover:text-primary ${
-                location.pathname === "/" ? "text-primary" : "text-gray-300"
-              }`}
-            >
-              Home
+          <div className="flex items-center gap-2 md:gap-4">
+            <Link to="/">
+              <Button 
+                variant={location.pathname === "/" ? "default" : "hero"}
+                size="default"
+                className="font-bold text-sm md:text-base"
+              >
+                Home
+              </Button>
             </Link>
             <Link to="/lancamentos">
               <Button 
                 variant={location.pathname === "/lancamentos" ? "default" : "hero"}
-                size="lg"
-                className="font-bold"
+                size="default"
+                className="font-bold text-sm md:text-base"
               >
                 Lançamentos
               </Button>
