@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import logoEpice from "@/assets/logo-epice.jpg";
 
 const Hero = () => {
@@ -33,13 +32,12 @@ const Hero = () => {
         </p>
 
         <div className="flex justify-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300 px-4">
-          <Button variant="hero" size="lg" className="group uppercase font-bold text-sm md:text-base lg:text-lg px-6 md:px-8 py-5 md:py-6 rounded-full flex-col h-auto w-full md:w-auto max-w-md">
+          <Button variant="hero" size="lg" className="uppercase font-bold text-sm md:text-base lg:text-lg px-6 md:px-8 py-5 md:py-6 rounded-lg w-full md:w-auto max-w-md">
             <span className="text-center leading-snug">
               Quero o meu departamento
               <br />
               de marketing
             </span>
-            <ArrowRight className="h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-2 transition-transform duration-300 mt-2" />
           </Button>
         </div>
       </div>
