@@ -1,25 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import logoEpice from "@/assets/logo-epice.jpg";
-import specialist1 from "@/assets/specialist-1.jpg";
-import specialist2 from "@/assets/specialist-2.jpg";
-import specialist3 from "@/assets/specialist-3.jpg";
-import specialist4 from "@/assets/specialist-4.jpg";
-import specialist5 from "@/assets/specialist-5.jpg";
-import specialist6 from "@/assets/specialist-6.jpg";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 
-const specialists = [
-  { name: "Dr. João Silva", specialty: "Medicina Integrativa", image: specialist1 },
-  { name: "Dra. Maria Santos", specialty: "Nutrição Funcional", image: specialist2 },
-  { name: "Carlos Mendes", specialty: "Coaching Executivo", image: specialist3 },
-  { name: "Ana Costa", specialty: "Psicologia Positiva", image: specialist4 },
-  { name: "Roberto Lima", specialty: "Investimentos", image: specialist5 },
-  { name: "Juliana Ferreira", specialty: "Marketing Digital", image: specialist6 },
-];
+const specialists: { name: string; specialty: string; image: string }[] = [];
 
 const Lancamentos = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
