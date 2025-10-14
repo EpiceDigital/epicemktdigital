@@ -11,7 +11,7 @@ const About = () => {
   ];
 
   return (
-    <section className="py-24 bg-black relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-black relative overflow-hidden">
       {/* Background Image */}
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center"
@@ -22,18 +22,18 @@ const About = () => {
       />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="animate-in fade-in slide-in-from-left duration-700">
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider">
+            <span className="text-primary font-semibold text-xs md:text-sm uppercase tracking-wider">
               Sobre nós
             </span>
-            <h2 className="text-4xl md:text-5xl font-display font-bold mt-4 mb-6 text-white">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mt-4 mb-4 md:mb-6 text-white">
               Transformamos ideias em{" "}
               <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
                 resultados
               </span>
             </h2>
-            <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+            <p className="text-base md:text-lg text-gray-300 mb-6 md:mb-8 leading-relaxed">
               Somos uma agência de marketing digital apaixonada por criar experiências 
               digitais que conectam marcas com pessoas. Nossa missão é impulsionar o 
               crescimento dos nossos clientes através de estratégias inovadoras e 

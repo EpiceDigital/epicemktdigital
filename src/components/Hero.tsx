@@ -4,23 +4,23 @@ import logoEpice from "@/assets/logo-epice.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 px-4">
       {/* Dark background with gradient */}
       <div className="absolute inset-0 z-0 bg-black">
         <div className="absolute inset-0 bg-[var(--gradient-hero)] opacity-40" />
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 z-10 text-center">
+      <div className="container mx-auto z-10 text-center">
         {/* Logo */}
-        <div className="mb-8 animate-in fade-in slide-in-from-top duration-700">
+        <div className="mb-6 md:mb-8 animate-in fade-in slide-in-from-top duration-700">
           <img 
             src={logoEpice} 
             alt="epice" 
-            className="h-32 md:h-40 lg:h-48 mx-auto"
+            className="h-24 md:h-32 lg:h-40 mx-auto"
           />
         </div>
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100 text-white">
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold mb-4 md:mb-6 px-2 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100 text-white leading-tight">
           Um departamento de marketing
           <br />
           <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
@@ -28,18 +28,18 @@ const Hero = () => {
           </span>
         </h1>
 
-        <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
+        <p className="text-base md:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto mb-8 md:mb-10 px-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200 leading-relaxed">
           Montamos uma equipe 360° que respira o seu negócio, entende seus objetivos e constrói estratégias que funcionam para o crescimento da sua empresa.
         </p>
 
-        <div className="flex justify-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
-          <Button variant="hero" size="lg" className="group uppercase font-bold text-base md:text-lg px-8 py-6 rounded-full flex-col h-auto">
-            <span className="text-center">
+        <div className="flex justify-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300 px-4">
+          <Button variant="hero" size="lg" className="group uppercase font-bold text-sm md:text-base lg:text-lg px-6 md:px-8 py-5 md:py-6 rounded-full flex-col h-auto w-full md:w-auto max-w-md">
+            <span className="text-center leading-snug">
               Quero o meu departamento
               <br />
               de marketing
             </span>
-            <ArrowRight className="h-5 w-5 group-hover:translate-x-2 transition-transform duration-300 mt-2" />
+            <ArrowRight className="h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-2 transition-transform duration-300 mt-2" />
           </Button>
         </div>
       </div>

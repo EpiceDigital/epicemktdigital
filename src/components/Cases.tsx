@@ -39,7 +39,7 @@ const Cases = () => {
   }, [emblaApi]);
 
   return (
-    <section className="py-24 bg-black relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-black relative overflow-hidden">
       {/* Background Image */}
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center"
@@ -50,11 +50,11 @@ const Cases = () => {
       />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 text-white">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4 text-white px-4">
             Conheça alguns de nossos principais cases
           </h2>
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto px-4">
             Resultados reais de clientes que confiaram em nosso trabalho
           </p>
         </div>
@@ -78,10 +78,14 @@ const Cases = () => {
           </div>
         </div>
 
-        <div className="flex justify-center">
-          <Button variant="hero" size="lg" className="group uppercase font-bold">
-            Quero o meu departamento de marketing
-            <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+        <div className="flex justify-center px-4">
+          <Button variant="hero" size="lg" className="group uppercase font-bold text-sm md:text-base px-6 md:px-8 py-5 md:py-6 rounded-full flex-col h-auto w-full md:w-auto max-w-md">
+            <span className="text-center leading-snug">
+              Quero o meu departamento
+              <br />
+              de marketing
+            </span>
+            <ArrowRight className="h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-2 transition-transform duration-300 mt-2" />
           </Button>
         </div>
       </div>
