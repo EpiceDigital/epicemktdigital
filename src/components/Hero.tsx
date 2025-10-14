@@ -33,9 +33,9 @@ const Hero = () => {
         </p>
 
         <div className="flex justify-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
-          <Button variant="hero" size="lg" className="group uppercase font-bold">
+          <Button variant="hero" size="lg" className="group uppercase font-bold text-base md:text-lg px-8 py-6 rounded-full">
             Quero o meu departamento de marketing
-            <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" />
           </Button>
         </div>
       </div>
