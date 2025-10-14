@@ -2,14 +2,20 @@ import { Button } from "@/components/ui/button";
 import useEmblaCarousel from "embla-carousel-react";
 import { useEffect, useCallback } from "react";
 import casesBg from "@/assets/cases-bg.jpg";
+import cairoImg from "@/assets/specialist-cairo.jpg";
+import guilhermeImg from "@/assets/specialist-guilherme.jpg";
+import isaImg from "@/assets/specialist-isa.jpg";
+import joaoImg from "@/assets/specialist-joao.jpg";
+import marceloImg from "@/assets/specialist-marcelo.jpeg";
+import rodrigoImg from "@/assets/specialist-rodrigo.jpg";
 
-const clientLogos = [
-  { name: "Cliente 1", logo: "C1" },
-  { name: "Cliente 2", logo: "C2" },
-  { name: "Cliente 3", logo: "C3" },
-  { name: "Cliente 4", logo: "C4" },
-  { name: "Cliente 5", logo: "C5" },
-  { name: "Cliente 6", logo: "C6" },
+const specialists = [
+  { name: "Cairo Trader", image: cairoImg },
+  { name: "Guilherme Machado", image: guilhermeImg },
+  { name: "Isa", image: isaImg },
+  { name: "João Dib", image: joaoImg },
+  { name: "Marcelo Gomide", image: marceloImg },
+  { name: "Rodrigo Miranda", image: rodrigoImg },
 ];
 
 const Cases = () => {
@@ -61,15 +67,17 @@ const Cases = () => {
         <div className="relative max-w-5xl mx-auto mb-12">
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex gap-8">
-              {clientLogos.map((client, index) => (
+              {specialists.map((specialist, index) => (
                 <div
                   key={index}
                   className="flex-[0_0_200px] min-w-0"
                 >
-                  <div className="aspect-square rounded-2xl bg-gradient-to-br from-card to-card/50 border-2 border-border flex items-center justify-center hover:border-primary transition-all duration-300 hover:shadow-[var(--shadow-card)]">
-                    <span className="text-4xl font-display font-bold text-primary">
-                      {client.logo}
-                    </span>
+                  <div className="aspect-square rounded-2xl overflow-hidden border-2 border-border hover:border-primary transition-all duration-300 hover:shadow-[var(--shadow-card)]">
+                    <img 
+                      src={specialist.image} 
+                      alt={specialist.name}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
               ))}
