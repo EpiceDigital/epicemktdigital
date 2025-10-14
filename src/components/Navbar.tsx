@@ -22,7 +22,7 @@ const Navbar = () => {
                 size="default"
                 className="font-bold text-sm md:text-base"
               >
-                Home
+                Prestação de Serviços
               </Button>
             </Link>
             <Link to="/lancamentos">
