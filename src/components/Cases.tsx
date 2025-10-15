@@ -9,11 +9,11 @@ import casePauloCapel from "@/assets/case-paulo-capel.png";
 import caseRewiid from "@/assets/case-rewiid-new.png";
 
 const cases = [
-  { name: "Ana Karolina", image: caseAnaKarolina, bgColor: "#FFD9B4" },
-  { name: "MBA", image: caseMba, bgColor: "#000000" },
-  { name: "Modelisé", image: caseModelise, bgColor: "#1a3d32" },
-  { name: "Paulo Capel", image: casePauloCapel, bgColor: "#000000" },
-  { name: "Rewiid", image: caseRewiid, bgColor: "#f4c430" },
+  { name: "Ana Karolina", image: caseAnaKarolina },
+  { name: "MBA", image: caseMba },
+  { name: "Modelisé", image: caseModelise },
+  { name: "Paulo Capel", image: casePauloCapel },
+  { name: "Rewiid", image: caseRewiid },
 ];
 
 const Cases = () => {
@@ -71,15 +71,12 @@ const Cases = () => {
                   className="flex-[0_0_320px] min-w-0"
                 >
                   <div 
-                    className="group aspect-video rounded-2xl overflow-hidden border-2 border-border hover:border-primary transition-all duration-500 flex items-center justify-center p-10 hover:scale-105 hover:[box-shadow:var(--shadow-glow)]"
-                    style={{
-                      background: caseItem.bgColor
-                    }}
+                    className="group aspect-video rounded-2xl overflow-hidden border-2 border-border hover:border-primary transition-all duration-500 hover:scale-105 hover:[box-shadow:var(--shadow-glow)]"
                   >
                     <img 
                       src={caseItem.image} 
                       alt={caseItem.name}
-                      className="w-full h-full object-contain filter brightness-90 group-hover:brightness-100 transition-all duration-500"
+                      className="w-full h-full object-cover filter brightness-90 group-hover:brightness-100 transition-all duration-500"
                     />
                   </div>
                 </div>
