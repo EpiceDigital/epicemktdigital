@@ -3,7 +3,14 @@ import useEmblaCarousel from "embla-carousel-react";
 import { useEffect, useCallback } from "react";
 import casesBg from "@/assets/cases-bg.jpg";
 
-const specialists: { name: string; image: string }[] = [];
+const specialists = [
+  { name: "Cairo Trader" },
+  { name: "Guilherme Machado" },
+  { name: "Isa" },
+  { name: "João Dib" },
+  { name: "Marcelo Gomide" },
+  { name: "Rodrigo Miranda" },
+];
 
 const Cases = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
@@ -59,12 +66,8 @@ const Cases = () => {
                   key={index}
                   className="flex-[0_0_200px] min-w-0"
                 >
-                  <div className="aspect-square rounded-2xl overflow-hidden border-2 border-border hover:border-primary transition-all duration-300 hover:shadow-[var(--shadow-card)]">
-                    <img 
-                      src={specialist.image} 
-                      alt={specialist.name}
-                      className="w-full h-full object-cover"
-                    />
+                  <div className="aspect-square rounded-2xl overflow-hidden border-2 border-border hover:border-primary transition-all duration-300 hover:shadow-[var(--shadow-card)] bg-card flex items-center justify-center p-4">
+                    <p className="text-center font-semibold text-foreground">{specialist.name}</p>
                   </div>
                 </div>
               ))}
