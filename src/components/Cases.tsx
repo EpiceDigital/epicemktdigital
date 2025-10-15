@@ -2,12 +2,18 @@ import { Button } from "@/components/ui/button";
 import useEmblaCarousel from "embla-carousel-react";
 import { useEffect, useCallback } from "react";
 import casesBg from "@/assets/cases-bg.jpg";
-import caseRewiid from "@/assets/case-rewiid.png";
-import caseSpectro from "@/assets/case-spectro.png";
-import caseModo from "@/assets/case-modo.png";
-import caseAnaKarolina from "@/assets/case-ana-karolina.png";
+import caseAnaKarolina from "@/assets/case-ana-karolina-new.png";
+import caseMba from "@/assets/case-mba.png";
+import caseModelise from "@/assets/case-modelise.png";
+import casePauloCapel from "@/assets/case-paulo-capel.png";
+import caseRewiid from "@/assets/case-rewiid-new.png";
 
 const cases = [
+  { name: "Ana Karolina", image: caseAnaKarolina, bgColor: "#FFD9B4" },
+  { name: "MBA", image: caseMba, bgColor: "#000000" },
+  { name: "Modelisé", image: caseModelise, bgColor: "#1a3d32" },
+  { name: "Paulo Capel", image: casePauloCapel, bgColor: "#000000" },
+  { name: "Rewiid", image: caseRewiid, bgColor: "#f4c430" },
 ];
 
 const Cases = () => {
@@ -67,9 +73,7 @@ const Cases = () => {
                   <div 
                     className="group aspect-video rounded-2xl overflow-hidden border-2 border-border hover:border-primary transition-all duration-500 flex items-center justify-center p-10 hover:scale-105 hover:[box-shadow:var(--shadow-glow)]"
                     style={{
-                      background: caseItem.name === "Ana Karolina" 
-                        ? "#FFD9B4" 
-                        : "linear-gradient(to bottom right, hsl(var(--card)), hsl(var(--muted) / 0.2), hsl(var(--primary) / 0.05))"
+                      background: caseItem.bgColor
                     }}
                   >
                     <img 
