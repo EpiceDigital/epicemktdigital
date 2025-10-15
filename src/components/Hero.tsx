@@ -13,7 +13,7 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto z-10 text-center">
         {/* Infinity Symbol */}
-        <div className="absolute inset-0 flex items-center justify-center z-0">
+        <div className="absolute inset-0 flex items-center justify-center z-0 translate-y-[30%]">
           <img
             src={infinito}
             alt="Infinito"
