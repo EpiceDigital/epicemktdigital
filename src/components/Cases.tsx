@@ -8,10 +8,6 @@ import caseModo from "@/assets/case-modo.png";
 import caseAnaKarolina from "@/assets/case-ana-karolina.png";
 
 const cases = [
-  { name: "Rewiid", image: caseRewiid },
-  { name: "Spectro", image: caseSpectro },
-  { name: "Modo", image: caseModo },
-  { name: "Ana Karolina", image: caseAnaKarolina },
 ];
 
 const Cases = () => {
