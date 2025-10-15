@@ -60,19 +60,19 @@ const Cases = () => {
           </p>
         </div>
 
-        <div className="relative max-w-5xl mx-auto mb-12">
+        <div className="relative max-w-6xl mx-auto mb-12">
           <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex gap-8">
+            <div className="flex gap-6">
               {cases.map((caseItem, index) => (
                 <div
                   key={index}
-                  className="flex-[0_0_280px] min-w-0"
+                  className="flex-[0_0_320px] min-w-0"
                 >
-                  <div className="aspect-video rounded-2xl overflow-hidden border-2 border-border hover:border-primary transition-all duration-300 hover:shadow-[var(--shadow-card)] bg-card flex items-center justify-center p-8">
+                  <div className="group aspect-video rounded-2xl overflow-hidden border border-border/50 hover:border-primary/50 transition-all duration-500 bg-gradient-to-br from-card via-card to-muted/30 flex items-center justify-center p-10 hover:scale-105 hover:shadow-2xl hover:shadow-primary/10">
                     <img 
                       src={caseItem.image} 
                       alt={caseItem.name}
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-contain filter grayscale-0 group-hover:brightness-110 transition-all duration-500"
                     />
                   </div>
                 </div>
