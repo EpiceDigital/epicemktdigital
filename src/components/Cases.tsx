@@ -64,14 +64,14 @@ const Cases = () => {
 
         <div className="relative max-w-6xl mx-auto mb-12">
           <div className="overflow-x-auto overflow-y-hidden scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent" ref={emblaRef}>
-            <div className="flex gap-6">
+            <div className="flex gap-8">
               {cases.map((caseItem, index) => (
                 <div
                   key={index}
                   className="flex-[0_0_320px] min-w-0"
                 >
                   <div 
-                    className="group aspect-video rounded-2xl overflow-hidden border-2 border-border hover:border-primary transition-all duration-500 hover:scale-105 hover:[box-shadow:var(--shadow-glow)]"
+                    className="group aspect-video rounded-3xl overflow-hidden border-2 border-border hover:border-primary transition-all duration-500 hover:scale-105 hover:[box-shadow:var(--shadow-glow)]"
                   >
                     <img 
                       src={caseItem.image} 
