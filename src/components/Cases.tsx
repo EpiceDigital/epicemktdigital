@@ -76,7 +76,7 @@ const Cases = () => {
         </div>
 
         <div className="flex justify-center px-4">
-          <Button variant="hero" size="lg" className="uppercase font-bold text-sm md:text-base px-6 md:px-8 py-5 md:py-6 rounded-lg w-full md:w-auto max-w-md">
+          <Button variant="hero" size="lg" className="group uppercase font-bold">
             <span className="text-center leading-snug">
               Quero o meu departamento
               <br />
