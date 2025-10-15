@@ -4,7 +4,7 @@ import infinito from "@/assets/infinito.png";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 px-4">
+    <section className="relative min-h-screen flex items-center justify-center overflow-visible pt-20 px-4 pb-32">
       {/* Dark background with gradient */}
       <div className="absolute inset-0 z-0 bg-black">
         <div className="absolute inset-0 bg-[var(--gradient-hero)] opacity-40" />
