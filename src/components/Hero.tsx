@@ -17,7 +17,7 @@ const Hero = () => {
           <img
             src={infinito}
             alt="Infinito"
-            className="w-full max-w-5xl opacity-10 drop-shadow-[0_0_40px_rgba(255,255,255,0.4)]"
+            className="w-full max-w-5xl opacity-10 drop-shadow-[0_0_40px_rgba(255,255,255,0.4)] -rotate-45"
           />
         </div>
 
