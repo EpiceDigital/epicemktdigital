@@ -68,7 +68,14 @@ const Cases = () => {
                   key={index}
                   className="flex-[0_0_320px] min-w-0"
                 >
-                  <div className="group aspect-video rounded-2xl overflow-hidden border-2 border-border hover:border-primary transition-all duration-500 bg-gradient-to-br from-card via-muted/20 to-primary/5 flex items-center justify-center p-10 hover:scale-105 hover:[box-shadow:var(--shadow-glow)]">
+                  <div 
+                    className="group aspect-video rounded-2xl overflow-hidden border-2 border-border hover:border-primary transition-all duration-500 flex items-center justify-center p-10 hover:scale-105 hover:[box-shadow:var(--shadow-glow)]"
+                    style={{
+                      background: caseItem.name === "Ana Karolina" 
+                        ? "#FFD9B4" 
+                        : "linear-gradient(to bottom right, hsl(var(--card)), hsl(var(--muted) / 0.2), hsl(var(--primary) / 0.05))"
+                    }}
+                  >
                     <img 
                       src={caseItem.image} 
                       alt={caseItem.name}
