@@ -9,11 +9,11 @@ import casePauloCapel from "@/assets/case-paulo-capel.png";
 import caseRewiid from "@/assets/case-rewiid-new.png";
 
 const cases = [
-  { name: "Ana Karolina", image: caseAnaKarolina },
+  { name: "Rewiid", image: caseRewiid },
   { name: "MBA", image: caseMba },
   { name: "Modelisé", image: caseModelise },
   { name: "Paulo Capel", image: casePauloCapel },
-  { name: "Rewiid", image: caseRewiid },
+  { name: "Ana Karolina", image: caseAnaKarolina },
 ];
 
 const Cases = () => {
