@@ -2,14 +2,16 @@ import { Button } from "@/components/ui/button";
 import useEmblaCarousel from "embla-carousel-react";
 import { useEffect, useCallback } from "react";
 import casesBg from "@/assets/cases-bg.jpg";
+import caseRewiid from "@/assets/case-rewiid.png";
+import caseSpectro from "@/assets/case-spectro.png";
+import caseModo from "@/assets/case-modo.png";
+import caseAnaKarolina from "@/assets/case-ana-karolina.png";
 
-const specialists = [
-  { name: "Cairo Trader" },
-  { name: "Guilherme Machado" },
-  { name: "Isa" },
-  { name: "João Dib" },
-  { name: "Marcelo Gomide" },
-  { name: "Rodrigo Miranda" },
+const cases = [
+  { name: "Rewiid", image: caseRewiid },
+  { name: "Spectro", image: caseSpectro },
+  { name: "Modo", image: caseModo },
+  { name: "Ana Karolina", image: caseAnaKarolina },
 ];
 
 const Cases = () => {
@@ -61,13 +63,17 @@ const Cases = () => {
         <div className="relative max-w-5xl mx-auto mb-12">
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex gap-8">
-              {specialists.map((specialist, index) => (
+              {cases.map((caseItem, index) => (
                 <div
                   key={index}
-                  className="flex-[0_0_200px] min-w-0"
+                  className="flex-[0_0_280px] min-w-0"
                 >
-                  <div className="aspect-square rounded-2xl overflow-hidden border-2 border-border hover:border-primary transition-all duration-300 hover:shadow-[var(--shadow-card)] bg-card flex items-center justify-center p-4">
-                    <p className="text-center font-semibold text-foreground">{specialist.name}</p>
+                  <div className="aspect-video rounded-2xl overflow-hidden border-2 border-border hover:border-primary transition-all duration-300 hover:shadow-[var(--shadow-card)] bg-card flex items-center justify-center p-8">
+                    <img 
+                      src={caseItem.image} 
+                      alt={caseItem.name}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
                 </div>
               ))}
