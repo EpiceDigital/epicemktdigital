@@ -1,12 +1,25 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import logoEpice from "@/assets/logo-epice.jpg";
+import cairoImg from "@/assets/specialist-cairo.jpg";
+import guilhermeImg from "@/assets/specialist-guilherme.jpg";
+import isaImg from "@/assets/specialist-isa.jpg";
+import joaoImg from "@/assets/specialist-joao.jpg";
+import marceloImg from "@/assets/specialist-marcelo.jpeg";
+import rodrigoImg from "@/assets/specialist-rodrigo.jpg";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 
-const specialists: { name: string; specialty: string; image: string }[] = [];
+const specialists = [
+  { name: "Cairo Trader", specialty: "Trading", image: cairoImg },
+  { name: "Guilherme Machado", specialty: "Marketing Digital", image: guilhermeImg },
+  { name: "Isa", specialty: "Coaching", image: isaImg },
+  { name: "João Dib", specialty: "Negócios", image: joaoImg },
+  { name: "Marcelo Gomide", specialty: "Investimentos", image: marceloImg },
+  { name: "Rodrigo Miranda", specialty: "Empreendedorismo", image: rodrigoImg },
+];
 
 const Lancamentos = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
