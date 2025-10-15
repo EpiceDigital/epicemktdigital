@@ -27,7 +27,7 @@ const Navbar = () => {
             </Link>
             <Link to="/lancamentos">
               <Button 
-                variant={location.pathname === "/lancamentos" ? "default" : "hero"}
+                variant="hero"
                 size="default"
                 className="font-bold text-sm md:text-base"
               >
