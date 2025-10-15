@@ -135,8 +135,7 @@ const Lancamentos = () => {
                       <img 
                         src={specialist.image} 
                         alt={specialist.name}
-                        className="w-32 h-32 rounded-full object-cover mb-4 mx-auto border-4 border-primary"
-                        style={{ objectPosition: 'center 20%' }}
+                        className="w-32 h-32 rounded-full object-cover mb-4 mx-auto border-4 border-primary object-[center_30%]"
                       />
                       <h3 className="text-xl font-bold mb-2 text-white text-center">{specialist.name}</h3>
                       <p className="text-gray-300 text-center">{specialist.specialty}</p>
