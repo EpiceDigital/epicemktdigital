@@ -64,7 +64,7 @@ const Cases = () => {
 
         <div className="relative max-w-6xl mx-auto mb-12">
           <div className="overflow-x-auto overflow-y-hidden scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent" ref={emblaRef}>
-            <div className="flex gap-12 px-6">
+            <div className="flex gap-6 px-6">
               {cases.map((caseItem, index) => (
                 <div
                   key={index}
