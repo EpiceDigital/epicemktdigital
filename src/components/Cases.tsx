@@ -2,21 +2,8 @@ import { Button } from "@/components/ui/button";
 import useEmblaCarousel from "embla-carousel-react";
 import { useEffect, useCallback } from "react";
 import casesBg from "@/assets/cases-bg.jpg";
-import cairoImg from "@/assets/specialist-cairo.jpg";
-import guilhermeImg from "@/assets/specialist-guilherme.jpg";
-import isaImg from "@/assets/specialist-isa.jpg";
-import joaoImg from "@/assets/specialist-joao.jpg";
-import marceloImg from "@/assets/specialist-marcelo.jpeg";
-import rodrigoImg from "@/assets/specialist-rodrigo.jpg";
 
-const specialists = [
-  { name: "Cairo Trader", image: cairoImg },
-  { name: "Guilherme Machado", image: guilhermeImg },
-  { name: "Isa", image: isaImg },
-  { name: "João Dib", image: joaoImg },
-  { name: "Marcelo Gomide", image: marceloImg },
-  { name: "Rodrigo Miranda", image: rodrigoImg },
-];
+const specialists: { name: string; image: string }[] = [];
 
 const Cases = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
