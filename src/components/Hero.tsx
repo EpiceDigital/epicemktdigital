@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
 import logoEpice from "@/assets/logo-epice.jpg";
 import infinito from "@/assets/infinito.png";
 
@@ -14,30 +13,13 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto z-10 text-center">
         {/* Infinity Symbol */}
-        <motion.div
-          className="mb-8 md:mb-10"
-          initial={{ opacity: 0, scale: 0.5, rotate: -180 }}
-          animate={{ opacity: 1, scale: 1, rotate: 0 }}
-          transition={{ 
-            duration: 1.2, 
-            ease: "easeOut",
-            delay: 0.2
-          }}
-        >
-          <motion.img
+        <div className="mb-8 md:mb-10">
+          <img
             src={infinito}
             alt="Infinito"
-            className="h-16 md:h-20 lg:h-24 mx-auto"
-            animate={{ 
-              rotate: [0, 360],
-            }}
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-              ease: "linear"
-            }}
+            className="h-32 md:h-40 lg:h-48 mx-auto opacity-[0.05] drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]"
           />
-        </motion.div>
+        </div>
 
         {/* Logo */}
         <div className="mb-6 md:mb-8 animate-in fade-in slide-in-from-top duration-700">
