@@ -13,16 +13,16 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto z-10 text-center">
         {/* Infinity Symbol */}
-        <div className="mb-8 md:mb-10">
+        <div className="absolute inset-0 flex items-center justify-center z-0">
           <img
             src={infinito}
             alt="Infinito"
-            className="h-32 md:h-40 lg:h-48 mx-auto opacity-[0.05] drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]"
+            className="w-full max-w-5xl opacity-10 drop-shadow-[0_0_40px_rgba(255,255,255,0.4)]"
           />
         </div>
 
         {/* Logo */}
-        <div className="mb-6 md:mb-8 animate-in fade-in slide-in-from-top duration-700">
+        <div className="mb-6 md:mb-8 animate-in fade-in slide-in-from-top duration-700 relative z-10">
           <img 
             src={logoEpice} 
             alt="epice" 
