@@ -139,14 +139,7 @@ const Lancamentos = () => {
                       />
                       <h3 className="text-xl font-bold mb-2 text-white text-center">{specialist.name}</h3>
                       {specialist.handle && (
-                        <a 
-                          href={`https://instagram.com/${specialist.handle.replace('@', '')}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-primary text-center font-medium mb-1 block hover:underline transition-all"
-                        >
-                          {specialist.handle}
-                        </a>
+                        <p className="text-primary text-center font-medium mb-1">{specialist.handle}</p>
                       )}
                       <p className="text-gray-300 text-center">{specialist.specialty}</p>
                     </div>
