@@ -99,16 +99,6 @@ const Footer = () => {
               <li className="text-gray-300">
                 São Paulo, SP
               </li>
-              <li>
-                <a href="mailto:contato@epice.com.br" className="text-gray-300 hover:text-primary transition-colors">
-                  contato@epice.com.br
-                </a>
-              </li>
-              <li>
-                <a href="tel:+5511999999999" className="text-gray-300 hover:text-primary transition-colors">
-                  (11) 99999-9999
-                </a>
-              </li>
             </ul>
           </div>
         </div>
