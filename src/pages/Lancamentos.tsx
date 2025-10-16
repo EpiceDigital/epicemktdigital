@@ -15,7 +15,7 @@ import useEmblaCarousel from "embla-carousel-react";
 const specialists = [
   { name: "Cairo Trader", specialty: "Trading", handle: "@cairotrader", image: cairoImg },
   { name: "Guilherme Machado", specialty: "Marketing Digital", handle: "@guilhermemachadooficial", image: guilhermeImg },
-  { name: "Isa", specialty: "Coaching", handle: "", image: isaImg },
+  { name: "Isa", specialty: "Coaching", handle: "@Isacoaching", image: isaImg },
   { name: "João Dib", specialty: "Negócios", handle: "@joãodibtrader", image: joaoImg },
   { name: "Marcelo Gomide", specialty: "Investimentos", handle: "@marcelogomide", image: marceloImg },
   { name: "Rodrigo Miranda", specialty: "Empreendedorismo", handle: "@orodrigomiranda", image: rodrigoImg },
