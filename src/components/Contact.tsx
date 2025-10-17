@@ -10,46 +10,36 @@ import contactBg from "@/assets/contact-bg.jpg";
 
 const Contact = () => {
   const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  
-  // Substitua YOUR_FORM_ID pelo ID do seu form no Formspree
-  // Exemplo: se seu endpoint é https://formspree.io/f/xyzabc123, use "xyzabc123"
-  const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsSubmitting(true);
     
     const form = e.currentTarget;
     const formData = new FormData(form);
-
-    try {
-      const response = await fetch(FORMSPREE_ENDPOINT, {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
-      });
-
-      if (response.ok) {
-        toast({
-          title: "Mensagem enviada!",
-          description: "Entraremos em contato em breve.",
-        });
-        form.reset();
-      } else {
-        throw new Error("Erro ao enviar");
-      }
-    } catch (error) {
-      toast({
-        title: "Erro ao enviar",
-        description: "Por favor, tente novamente ou entre em contato por telefone/email.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+    
+    const name = formData.get('name') as string;
+    const email = formData.get('email') as string;
+    const phone = formData.get('phone') as string;
+    const message = formData.get('message') as string;
+    
+    // Construir o mailto link
+    const subject = encodeURIComponent(`Contato de ${name}`);
+    const body = encodeURIComponent(
+      `Nome: ${name}\nEmail: ${email}\nTelefone: ${phone}\n\nMensagem:\n${message}`
+    );
+    
+    // Substitua pelo seu email
+    const mailtoLink = `mailto:contato@suaempresa.com?subject=${subject}&body=${body}`;
+    
+    // Abrir o cliente de email
+    window.location.href = mailtoLink;
+    
+    toast({
+      title: "Abrindo cliente de email",
+      description: "Sua mensagem está pronta para envio.",
+    });
+    
+    form.reset();
   };
 
   return (
@@ -138,9 +128,8 @@ const Contact = () => {
                 variant="hero" 
                 size="lg" 
                 className="w-full uppercase font-bold text-sm md:text-base py-5 md:py-6"
-                disabled={isSubmitting}
               >
-                {isSubmitting ? "Enviando..." : "Enviar mensagem"}
+                Enviar mensagem
               </Button>
             </form>
           </Card>
