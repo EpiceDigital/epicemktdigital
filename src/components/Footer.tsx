@@ -16,7 +16,7 @@ const Footer = () => {
             Departamento de marketing 360° para sua empresa crescer.
           </p>
           <div className="flex gap-4 justify-center">
-            <a href="https://www.instagram.com/epicedigital?igsh=MWZsaTQ1cmJqaml5YQ==" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-lg bg-muted hover:bg-primary/20 flex items-center justify-center transition-all group">
+            <a href="https://www.instagram.com/epicedigital/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-lg bg-muted hover:bg-primary/20 flex items-center justify-center transition-all group">
               <Instagram className="h-5 w-5 text-gray-400 group-hover:text-primary transition-colors" />
             </a>
             <a href="https://www.linkedin.com/company/epice-digital/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-lg bg-muted hover:bg-primary/20 flex items-center justify-center transition-all group">
