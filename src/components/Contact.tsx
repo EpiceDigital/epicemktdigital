@@ -28,8 +28,7 @@ const Contact = () => {
       `Nome: ${name}\nEmail: ${email}\nTelefone: ${phone}\n\nMensagem:\n${message}`
     );
     
-    // Substitua pelo seu email
-    const mailtoLink = `mailto:contato@suaempresa.com?subject=${subject}&body=${body}`;
+    const mailtoLink = `mailto:contato@epicedigital.com?subject=${subject}&body=${body}`;
     
     // Abrir o cliente de email
     window.location.href = mailtoLink;
