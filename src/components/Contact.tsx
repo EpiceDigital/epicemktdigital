@@ -10,20 +10,46 @@ import contactBg from "@/assets/contact-bg.jpg";
 
 const Contact = () => {
   const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  // Substitua YOUR_FORM_ID pelo ID do seu form no Formspree
+  // Exemplo: se seu endpoint é https://formspree.io/f/xyzabc123, use "xyzabc123"
+  const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    toast({
-      title: "Mensagem enviada!",
-      description: "Entraremos em contato em breve.",
-    });
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    setIsSubmitting(true);
+    
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Mensagem enviada!",
+          description: "Entraremos em contato em breve.",
+        });
+        form.reset();
+      } else {
+        throw new Error("Erro ao enviar");
+      }
+    } catch (error) {
+      toast({
+        title: "Erro ao enviar",
+        description: "Por favor, tente novamente ou entre em contato por telefone/email.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -63,9 +89,8 @@ const Contact = () => {
                   <Label htmlFor="name" className="text-gray-200">Nome completo</Label>
                   <Input
                     id="name"
+                    name="name"
                     placeholder="Seu nome"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     required
                     className="bg-background/50 border-border text-white placeholder:text-gray-500"
                   />
@@ -75,10 +100,9 @@ const Contact = () => {
                   <Label htmlFor="email" className="text-gray-200">Email</Label>
                   <Input
                     id="email"
+                    name="email"
                     type="email"
                     placeholder="seu@email.com"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     required
                     className="bg-background/50 border-border text-white placeholder:text-gray-500"
                   />
@@ -89,10 +113,9 @@ const Contact = () => {
                 <Label htmlFor="phone" className="text-gray-200">Telefone</Label>
                 <Input
                   id="phone"
+                  name="phone"
                   type="tel"
                   placeholder="11 4863-7876"
-                  value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   required
                   className="bg-background/50 border-border text-white placeholder:text-gray-500"
                 />
@@ -102,17 +125,22 @@ const Contact = () => {
                 <Label htmlFor="message" className="text-gray-200">Mensagem</Label>
                 <Textarea
                   id="message"
+                  name="message"
                   placeholder="Conte-nos sobre seu projeto..."
                   rows={5}
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   required
                   className="bg-background/50 border-border text-white placeholder:text-gray-500"
                 />
               </div>
 
-              <Button type="submit" variant="hero" size="lg" className="w-full uppercase font-bold text-sm md:text-base py-5 md:py-6">
-                Enviar mensagem
+              <Button 
+                type="submit" 
+                variant="hero" 
+                size="lg" 
+                className="w-full uppercase font-bold text-sm md:text-base py-5 md:py-6"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Enviando..." : "Enviar mensagem"}
               </Button>
             </form>
           </Card>
