@@ -35,34 +35,34 @@ const Footer = () => {
             <h4 className="font-semibold mb-4 text-white text-lg">Serviços</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-300 hover:text-primary transition-colors">
+                <button onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })} className="text-gray-300 hover:text-primary transition-colors">
                   Audiovisual
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-primary transition-colors">
+                <button onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })} className="text-gray-300 hover:text-primary transition-colors">
                   Design
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-primary transition-colors">
+                <button onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })} className="text-gray-300 hover:text-primary transition-colors">
                   Copywriting
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-primary transition-colors">
+                <button onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })} className="text-gray-300 hover:text-primary transition-colors">
                   Social Media
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-primary transition-colors">
+                <button onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })} className="text-gray-300 hover:text-primary transition-colors">
                   Tráfego Pago
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-primary transition-colors">
+                <button onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })} className="text-gray-300 hover:text-primary transition-colors">
                   Estratégia
-                </a>
+                </button>
               </li>
             </ul>
           </div>
@@ -72,19 +72,19 @@ const Footer = () => {
             <h4 className="font-semibold mb-4 text-white text-lg">Empresa</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-300 hover:text-primary transition-colors">
+                <button onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })} className="text-gray-300 hover:text-primary transition-colors">
                   Sobre
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-primary transition-colors">
+                <button onClick={() => document.getElementById('cases')?.scrollIntoView({ behavior: 'smooth' })} className="text-gray-300 hover:text-primary transition-colors">
                   Cases
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-primary transition-colors">
+                <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="text-gray-300 hover:text-primary transition-colors">
                   Contato
-                </a>
+                </button>
               </li>
             </ul>
           </div>
