@@ -1,4 +1,4 @@
-import { Instagram, Linkedin, Twitter, Mail } from "lucide-react";
+import { Instagram, Linkedin, Mail } from "lucide-react";
 import logoEpice from "@/assets/logo-epice.jpg";
 
 const Footer = () => {
@@ -16,16 +16,13 @@ const Footer = () => {
             Departamento de marketing 360° para sua empresa crescer.
           </p>
           <div className="flex gap-4 justify-center">
-            <a href="#" className="w-12 h-12 rounded-lg bg-muted hover:bg-primary/20 flex items-center justify-center transition-all group">
+            <a href="https://www.instagram.com/epicedigital?igsh=MWZsaTQ1cmJqaml5YQ==" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-lg bg-muted hover:bg-primary/20 flex items-center justify-center transition-all group">
               <Instagram className="h-5 w-5 text-gray-400 group-hover:text-primary transition-colors" />
             </a>
-            <a href="#" className="w-12 h-12 rounded-lg bg-muted hover:bg-primary/20 flex items-center justify-center transition-all group">
+            <a href="https://www.linkedin.com/company/epice-digital/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-lg bg-muted hover:bg-primary/20 flex items-center justify-center transition-all group">
               <Linkedin className="h-5 w-5 text-gray-400 group-hover:text-primary transition-colors" />
             </a>
-            <a href="#" className="w-12 h-12 rounded-lg bg-muted hover:bg-primary/20 flex items-center justify-center transition-all group">
-              <Twitter className="h-5 w-5 text-gray-400 group-hover:text-primary transition-colors" />
-            </a>
-            <a href="#" className="w-12 h-12 rounded-lg bg-muted hover:bg-primary/20 flex items-center justify-center transition-all group">
+            <a href="mailto:contato@epicedigital.com" className="w-12 h-12 rounded-lg bg-muted hover:bg-primary/20 flex items-center justify-center transition-all group">
               <Mail className="h-5 w-5 text-gray-400 group-hover:text-primary transition-colors" />
             </a>
           </div>
@@ -98,6 +95,16 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="text-gray-300">
                 São Paulo, SP
+              </li>
+              <li>
+                <a href="mailto:contato@epicedigital.com" className="text-gray-300 hover:text-primary transition-colors">
+                  contato@epicedigital.com
+                </a>
+              </li>
+              <li>
+                <a href="tel:+551148637876" className="text-gray-300 hover:text-primary transition-colors">
+                  11 4863-7876
+                </a>
               </li>
             </ul>
           </div>

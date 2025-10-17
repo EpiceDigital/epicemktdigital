@@ -90,9 +90,10 @@ const Contact = () => {
                 <Input
                   id="phone"
                   type="tel"
-                  placeholder="(11) 99999-9999"
+                  placeholder="11 4863-7876"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  required
                   className="bg-background/50 border-border text-white placeholder:text-gray-500"
                 />
               </div>
@@ -117,7 +118,31 @@ const Contact = () => {
           </Card>
 
           {/* Contact Info */}
-          <div className="mt-8 md:mt-12 flex justify-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
+          <div className="mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-12 h-12 rounded-xl bg-[var(--gradient-card)] flex items-center justify-center">
+                <Mail className="h-5 w-5 text-primary" />
+              </div>
+              <div>
+                <div className="font-semibold mb-1 text-white">Email</div>
+                <a href="mailto:contato@epicedigital.com" className="text-gray-300 hover:text-primary transition-colors text-sm">
+                  contato@epicedigital.com
+                </a>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-12 h-12 rounded-xl bg-[var(--gradient-card)] flex items-center justify-center">
+                <Phone className="h-5 w-5 text-primary" />
+              </div>
+              <div>
+                <div className="font-semibold mb-1 text-white">Telefone</div>
+                <a href="tel:+551148637876" className="text-gray-300 hover:text-primary transition-colors text-sm">
+                  11 4863-7876
+                </a>
+              </div>
+            </div>
+
             <div className="flex flex-col items-center gap-3">
               <div className="w-12 h-12 rounded-xl bg-[var(--gradient-card)] flex items-center justify-center">
                 <MapPin className="h-5 w-5 text-primary" />
