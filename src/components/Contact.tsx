@@ -57,10 +57,10 @@ const Contact = () => {
             Entre em contato
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mt-4 mb-4 text-white px-4">
-            Preencha o formulário
+            Entre em contato com nossa equipe,
             <br />
             <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
-              e fale com nosso time
+              para impulsionar seu marketing
             </span>
           </h2>
           <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto px-4">
