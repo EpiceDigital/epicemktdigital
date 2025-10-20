@@ -27,7 +27,7 @@ const Contact = () => {
       `*Contato de ${name}*\n\nEmail: ${email}\nTelefone: ${phone}\n\nMensagem:\n${message}`
     );
     
-    const whatsappLink = `https://wa.me/5511948637876?text=${whatsappMessage}`;
+    const whatsappLink = `https://wa.me/551148637876?text=${whatsappMessage}`;
     
     // Abrir WhatsApp
     window.open(whatsappLink, '_blank');
@@ -152,8 +152,8 @@ const Contact = () => {
               </div>
               <div>
                 <div className="font-semibold mb-1 text-sm md:text-base text-gray-100">Telefone</div>
-                <a href="tel:+5511948637876" className="text-gray-300 hover:text-primary transition-colors text-xs md:text-sm">
-                  11 94863-7876
+                <a href="tel:+551148637876" className="text-gray-300 hover:text-primary transition-colors text-xs md:text-sm">
+                  11 4863-7876
                 </a>
               </div>
             </div>
