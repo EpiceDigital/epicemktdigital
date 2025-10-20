@@ -22,19 +22,18 @@ const Contact = () => {
     const phone = formData.get('phone') as string;
     const message = formData.get('message') as string;
     
-    // Construir o mailto link
-    const subject = encodeURIComponent(`Contato de ${name}`);
-    const body = encodeURIComponent(
-      `Nome: ${name}\nEmail: ${email}\nTelefone: ${phone}\n\nMensagem:\n${message}`
+    // Construir mensagem para WhatsApp
+    const whatsappMessage = encodeURIComponent(
+      `*Contato de ${name}*\n\nEmail: ${email}\nTelefone: ${phone}\n\nMensagem:\n${message}`
     );
     
-    const mailtoLink = `mailto:contato@epicedigital.com?subject=${subject}&body=${body}`;
+    const whatsappLink = `https://wa.me/551148637876?text=${whatsappMessage}`;
     
-    // Abrir o cliente de email
-    window.location.href = mailtoLink;
+    // Abrir WhatsApp
+    window.open(whatsappLink, '_blank');
     
     toast({
-      title: "Abrindo cliente de email",
+      title: "Redirecionando para WhatsApp",
       description: "Sua mensagem está pronta para envio.",
     });
     
