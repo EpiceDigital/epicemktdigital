@@ -2,18 +2,14 @@ import { Button } from "@/components/ui/button";
 import useEmblaCarousel from "embla-carousel-react";
 import { useEffect, useCallback } from "react";
 import casesBg from "@/assets/cases-bg.jpg";
-import caseAnaKarolina from "@/assets/case-ana-karolina-new.png";
-import caseMba from "@/assets/case-mba.png";
 import caseModelise from "@/assets/case-modelise.png";
-import casePauloCapel from "@/assets/case-paulo-capel.png";
 import caseRewiid from "@/assets/case-rewiid-new.png";
+import caseMontes from "@/assets/case-montes.png";
 
 const cases = [
   { name: "Rewiid", image: caseRewiid },
-  { name: "MBA", image: caseMba },
   { name: "Modelisé", image: caseModelise },
-  { name: "Paulo Capel", image: casePauloCapel },
-  { name: "Ana Karolina", image: caseAnaKarolina },
+  { name: "Montes Educação Corporativa", image: caseMontes },
 ];
 
 const Cases = () => {
