@@ -4,12 +4,12 @@ import { useEffect, useCallback } from "react";
 import casesBg from "@/assets/cases-bg.jpg";
 import caseModelise from "@/assets/case-modelise.png";
 import caseRewiid from "@/assets/case-rewiid-new.png";
-import caseMontes from "@/assets/case-montes.png";
+import caseMontes from "@/assets/case-montes-new.png";
 
 const cases = [
   { name: "Rewiid", image: caseRewiid },
   { name: "Modelisé", image: caseModelise },
-  { name: "Montes Educação Corporativa", image: caseMontes, smaller: true },
+  { name: "Montes Educação Corporativa", image: caseMontes },
 ];
 
 const Cases = () => {
@@ -67,13 +67,12 @@ const Cases = () => {
                   className="flex-[0_0_320px] min-w-0"
                 >
                   <div 
-                    className="group aspect-video rounded-3xl overflow-hidden border-2 border-border hover:border-primary transition-all duration-500 hover:scale-105 hover:[box-shadow:var(--shadow-glow)] flex items-center justify-center p-8"
-                    style={{ backgroundColor: caseItem.smaller ? '#171717' : 'transparent' }}
+                    className="group aspect-video rounded-3xl overflow-hidden border-2 border-border hover:border-primary transition-all duration-500 hover:scale-105 hover:[box-shadow:var(--shadow-glow)] flex items-center justify-center p-8 bg-[#171717]"
                   >
                     <img 
                       src={caseItem.image} 
                       alt={caseItem.name}
-                      className={`${caseItem.smaller ? 'w-3/4 h-3/4 object-contain' : 'w-full h-full object-cover'} filter brightness-90 group-hover:brightness-100 transition-all duration-500`}
+                      className="w-3/4 h-3/4 object-contain filter brightness-90 group-hover:brightness-100 transition-all duration-500"
                     />
                   </div>
                 </div>
