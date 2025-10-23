@@ -7,6 +7,8 @@ import isaImg from "@/assets/specialist-isa.jpg";
 import joaoImg from "@/assets/specialist-joao.jpg";
 import marceloImg from "@/assets/specialist-marcelo.jpeg";
 import rodrigoImg from "@/assets/specialist-rodrigo.jpg";
+import anaKarolinaImg from "@/assets/specialist-ana-karolina.png";
+import pauloCapelImg from "@/assets/specialist-paulo-capel.png";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { useCallback, useEffect } from "react";
@@ -19,6 +21,8 @@ const specialists = [
   { name: "João Dib", specialty: "Negócios", handle: "@joãodibtrader", image: joaoImg },
   { name: "Marcelo Gomide", specialty: "Investimentos", handle: "@marcelogomide", image: marceloImg },
   { name: "Rodrigo Miranda", specialty: "Empreendedorismo", handle: "@orodrigomiranda", image: rodrigoImg },
+  { name: "Ana Karolina", specialty: "Liderança", handle: "@anakarolinamontes", image: anaKarolinaImg },
+  { name: "Paulo Capel", specialty: "Liderança", handle: "@paulo.capel", image: pauloCapelImg },
 ];
 
 const Lancamentos = () => {
