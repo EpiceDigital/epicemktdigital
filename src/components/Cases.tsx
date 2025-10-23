@@ -67,13 +67,13 @@ const Cases = () => {
                   className="flex-[0_0_320px] min-w-0"
                 >
                   <div 
-                    className="group aspect-video rounded-3xl overflow-hidden border-2 border-border hover:border-primary transition-all duration-500 hover:scale-105 hover:[box-shadow:var(--shadow-glow)] flex items-center justify-center"
+                    className="group aspect-video rounded-3xl overflow-hidden border-2 border-border hover:border-primary transition-all duration-500 hover:scale-105 hover:[box-shadow:var(--shadow-glow)] flex items-center justify-center p-8"
                     style={{ backgroundColor: caseItem.smaller ? '#171717' : 'transparent' }}
                   >
                     <img 
                       src={caseItem.image} 
                       alt={caseItem.name}
-                      className={`${caseItem.smaller ? 'w-full h-full object-contain' : 'w-full h-full object-cover'} filter brightness-90 group-hover:brightness-100 transition-all duration-500`}
+                      className={`${caseItem.smaller ? 'w-3/4 h-3/4 object-contain' : 'w-full h-full object-cover'} filter brightness-90 group-hover:brightness-100 transition-all duration-500`}
                     />
                   </div>
                 </div>
