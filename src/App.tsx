@@ -14,7 +14,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/epicemktdigital">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/lancamentos" element={<Lancamentos />} />
