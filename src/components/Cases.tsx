@@ -9,7 +9,7 @@ import caseMontes from "@/assets/case-montes.png";
 const cases = [
   { name: "Rewiid", image: caseRewiid },
   { name: "Modelisé", image: caseModelise },
-  { name: "Montes Educação Corporativa", image: caseMontes },
+  { name: "Montes Educação Corporativa", image: caseMontes, smaller: true },
 ];
 
 const Cases = () => {
@@ -67,12 +67,12 @@ const Cases = () => {
                   className="flex-[0_0_320px] min-w-0"
                 >
                   <div 
-                    className="group aspect-video rounded-3xl overflow-hidden border-2 border-border hover:border-primary transition-all duration-500 hover:scale-105 hover:[box-shadow:var(--shadow-glow)]"
+                    className="group aspect-video rounded-3xl overflow-hidden border-2 border-border hover:border-primary transition-all duration-500 hover:scale-105 hover:[box-shadow:var(--shadow-glow)] flex items-center justify-center bg-black"
                   >
                     <img 
                       src={caseItem.image} 
                       alt={caseItem.name}
-                      className="w-full h-full object-cover filter brightness-90 group-hover:brightness-100 transition-all duration-500"
+                      className={`${caseItem.smaller ? 'w-3/5 h-3/5 object-contain' : 'w-full h-full object-cover'} filter brightness-90 group-hover:brightness-100 transition-all duration-500`}
                     />
                   </div>
                 </div>
