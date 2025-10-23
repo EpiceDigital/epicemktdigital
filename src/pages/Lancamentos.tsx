@@ -13,12 +13,12 @@ import { useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 
 const specialists = [
-  { name: "Cairo Trader", specialty: "Trading", handle: "@cairotrader", image: cairoImg },
-  { name: "Guilherme Machado", specialty: "Marketing Digital", handle: "@guilhermemachadooficial", image: guilhermeImg },
-  { name: "Isa", specialty: "Coaching", handle: "@Isacoaching", image: isaImg },
-  { name: "João Dib", specialty: "Negócios", handle: "@joãodibtrader", image: joaoImg },
-  { name: "Marcelo Gomide", specialty: "Investimentos", handle: "@marcelogomide", image: marceloImg },
-  { name: "Rodrigo Miranda", specialty: "Empreendedorismo", handle: "@orodrigomiranda", image: rodrigoImg },
+  { name: "Cairo Trader", handle: "@cairotrader", image: cairoImg },
+  { name: "Guilherme Machado", handle: "@guilhermemachadooficial", image: guilhermeImg },
+  { name: "Isa", handle: "@isabelepiresingles", image: isaImg },
+  { name: "João Dib", handle: "@joãodibtrader", image: joaoImg },
+  { name: "Marcelo Gomide", handle: "@marcelogomide", image: marceloImg },
+  { name: "Rodrigo Miranda", handle: "@universidadedobitcoinoficial", image: rodrigoImg },
 ];
 
 const Lancamentos = () => {
@@ -139,9 +139,8 @@ const Lancamentos = () => {
                       />
                       <h3 className="text-xl font-bold mb-2 text-white text-center">{specialist.name}</h3>
                       {specialist.handle && (
-                        <p className="text-primary text-center font-medium mb-1">{specialist.handle}</p>
+                        <p className="text-primary text-center font-medium">{specialist.handle}</p>
                       )}
-                      <p className="text-gray-300 text-center">{specialist.specialty}</p>
                     </div>
                   </div>
                 ))}
