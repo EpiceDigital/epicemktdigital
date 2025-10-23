@@ -15,8 +15,9 @@ const cases = [
 const Cases = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
     loop: true,
-    align: 'start',
+    align: 'center',
     slidesToScroll: 1,
+    duration: 40,
   });
 
   useEffect(() => {
@@ -24,7 +25,7 @@ const Cases = () => {
 
     const autoplay = setInterval(() => {
       emblaApi.scrollNext();
-    }, 3000);
+    }, 5000);
 
     return () => clearInterval(autoplay);
   }, [emblaApi]);
@@ -59,8 +60,8 @@ const Cases = () => {
         </div>
 
         <div className="relative max-w-6xl mx-auto mb-12">
-          <div className="overflow-x-auto overflow-y-hidden scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent" ref={emblaRef}>
-            <div className="flex gap-6 px-6">
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex gap-6 px-6 transition-transform duration-1000 ease-in-out">
               {cases.map((caseItem, index) => (
                 <div
                   key={index}
