@@ -73,7 +73,7 @@ const Cases = () => {
                     <img 
                       src={caseItem.image} 
                       alt={caseItem.name}
-                      className={`${caseItem.smaller ? 'w-3/5 h-3/5 object-contain' : 'w-full h-full object-cover'} filter brightness-90 group-hover:brightness-100 transition-all duration-500`}
+                      className={`${caseItem.smaller ? 'w-full h-full object-contain' : 'w-full h-full object-cover'} filter brightness-90 group-hover:brightness-100 transition-all duration-500`}
                     />
                   </div>
                 </div>
