@@ -68,7 +68,7 @@ const Cases = () => {
                 >
                   <div 
                     className="group aspect-video rounded-3xl overflow-hidden border-2 border-border hover:border-primary transition-all duration-500 hover:scale-105 hover:[box-shadow:var(--shadow-glow)] flex items-center justify-center"
-                    style={{ backgroundColor: caseItem.smaller ? '#161616' : 'transparent' }}
+                    style={{ backgroundColor: caseItem.smaller ? '#171717' : 'transparent' }}
                   >
                     <img 
                       src={caseItem.image} 
