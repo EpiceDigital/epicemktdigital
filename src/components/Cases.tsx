@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import useEmblaCarousel from "embla-carousel-react";
-import { useEffect } from "react";
+import Autoplay from "embla-carousel-autoplay";
 import casesBg from "@/assets/cases-bg.jpg";
 import caseModelise from "@/assets/case-modelise.png";
 import caseRewiid from "@/assets/case-rewiid-new.png";
@@ -16,27 +16,14 @@ const cases = [
 ];
 
 const Cases = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ 
-    loop: true,
-    align: 'center',
-    dragFree: true,
-  });
-
-  useEffect(() => {
-    if (!emblaApi) return;
-
-    const autoScroll = () => {
-      if (emblaApi.canScrollNext()) {
-        emblaApi.scrollNext();
-      } else {
-        emblaApi.scrollTo(0);
-      }
-    };
-
-    const interval = setInterval(autoScroll, 3000);
-
-    return () => clearInterval(interval);
-  }, [emblaApi]);
+  const [emblaRef] = useEmblaCarousel(
+    { 
+      loop: true,
+      align: 'start',
+      dragFree: false,
+    },
+    [Autoplay({ delay: 3000, stopOnInteraction: false })]
+  );
 
   return (
     <section className="py-16 md:py-24 bg-background relative overflow-hidden">
