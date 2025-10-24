@@ -34,7 +34,7 @@ const Methodology = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 text-white">
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 text-primary">
             Conheça a nossa metodologia
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
