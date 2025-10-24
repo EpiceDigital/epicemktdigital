@@ -6,14 +6,14 @@ import caseModelise from "@/assets/case-modelise.png";
 import caseRewiid from "@/assets/case-rewiid-new.png";
 import caseMontes from "@/assets/case-montes-new.png";
 
-const cases = [
-  { name: "Rewiid", image: caseRewiid },
-  { name: "Modelisé", image: caseModelise },
-  { name: "Montes Educação Corporativa", image: caseMontes },
+const baseCases = [
   { name: "Rewiid", image: caseRewiid },
   { name: "Modelisé", image: caseModelise },
   { name: "Montes Educação Corporativa", image: caseMontes },
 ];
+
+// Duplicate cases multiple times for seamless infinite loop
+const cases = [...baseCases, ...baseCases, ...baseCases, ...baseCases];
 
 const Cases = () => {
   const [emblaRef] = useEmblaCarousel(
