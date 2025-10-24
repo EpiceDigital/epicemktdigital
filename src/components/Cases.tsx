@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import useEmblaCarousel from "embla-carousel-react";
-import { useEffect } from "react";
+import { useEffect, useCallback } from "react";
 import casesBg from "@/assets/cases-bg.jpg";
 import caseModelise from "@/assets/case-modelise.png";
 import caseRewiid from "@/assets/case-rewiid-new.png";
@@ -10,33 +10,28 @@ const cases = [
   { name: "Rewiid", image: caseRewiid },
   { name: "Modelisé", image: caseModelise },
   { name: "Montes Educação Corporativa", image: caseMontes },
-  { name: "Rewiid", image: caseRewiid },
-  { name: "Modelisé", image: caseModelise },
-  { name: "Montes Educação Corporativa", image: caseMontes },
 ];
 
 const Cases = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
     loop: true,
-    align: 'center',
-    dragFree: true,
+    align: 'start',
+    dragFree: false,
   });
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
 
   useEffect(() => {
     if (!emblaApi) return;
 
-    const autoScroll = () => {
-      if (emblaApi.canScrollNext()) {
-        emblaApi.scrollNext();
-      } else {
-        emblaApi.scrollTo(0);
-      }
-    };
+    const autoplay = setInterval(() => {
+      scrollNext();
+    }, 3000);
 
-    const interval = setInterval(autoScroll, 3000);
-
-    return () => clearInterval(interval);
-  }, [emblaApi]);
+    return () => clearInterval(autoplay);
+  }, [emblaApi, scrollNext]);
 
   return (
     <section className="py-16 md:py-24 bg-background relative overflow-hidden">
@@ -59,8 +54,8 @@ const Cases = () => {
           </p>
         </div>
 
-        <div className="relative max-w-6xl mx-auto mb-12 overflow-hidden" ref={emblaRef}>
-          <div className="flex gap-6 transition-transform duration-700 ease-out">
+        <div className="overflow-hidden" ref={emblaRef}>
+          <div className="flex gap-6 transition-transform duration-700 ease-in-out">
             {cases.map((caseItem, index) => (
               <div
                 key={index}
