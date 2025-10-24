@@ -1,4 +1,6 @@
 import { Button } from "@/components/ui/button";
+import useEmblaCarousel from "embla-carousel-react";
+import { useEffect } from "react";
 import casesBg from "@/assets/cases-bg.jpg";
 import caseModelise from "@/assets/case-modelise.png";
 import caseRewiid from "@/assets/case-rewiid-new.png";
@@ -8,9 +10,33 @@ const cases = [
   { name: "Rewiid", image: caseRewiid },
   { name: "Modelisé", image: caseModelise },
   { name: "Montes Educação Corporativa", image: caseMontes },
+  { name: "Rewiid", image: caseRewiid },
+  { name: "Modelisé", image: caseModelise },
+  { name: "Montes Educação Corporativa", image: caseMontes },
 ];
 
 const Cases = () => {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    loop: true,
+    align: 'center',
+    dragFree: true,
+  });
+
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    const autoScroll = () => {
+      if (emblaApi.canScrollNext()) {
+        emblaApi.scrollNext();
+      } else {
+        emblaApi.scrollTo(0);
+      }
+    };
+
+    const interval = setInterval(autoScroll, 3000);
+
+    return () => clearInterval(interval);
+  }, [emblaApi]);
 
   return (
     <section className="py-16 md:py-24 bg-background relative overflow-hidden">
@@ -33,19 +59,23 @@ const Cases = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12 px-4">
-          {cases.map((caseItem, index) => (
-            <div
-              key={index}
-              className="group aspect-video rounded-3xl overflow-hidden border-2 border-border hover:border-primary transition-all duration-500 hover:scale-105 hover:[box-shadow:var(--shadow-glow)] flex items-center justify-center bg-[#171717]"
-            >
-              <img 
-                src={caseItem.image} 
-                alt={caseItem.name}
-                className="w-full h-full object-contain filter brightness-90 group-hover:brightness-100 transition-all duration-500"
-              />
-            </div>
-          ))}
+        <div className="relative max-w-6xl mx-auto mb-12 overflow-hidden" ref={emblaRef}>
+          <div className="flex gap-6 transition-transform duration-700 ease-out">
+            {cases.map((caseItem, index) => (
+              <div
+                key={index}
+                className="flex-[0_0_90%] md:flex-[0_0_45%] lg:flex-[0_0_30%] min-w-0"
+              >
+                <div className="group aspect-video rounded-3xl overflow-hidden border-2 border-border hover:border-primary transition-all duration-500 hover:scale-105 hover:[box-shadow:var(--shadow-glow)] flex items-center justify-center bg-[#171717]">
+                  <img 
+                    src={caseItem.image} 
+                    alt={caseItem.name}
+                    className="w-full h-full object-contain filter brightness-90 group-hover:brightness-100 transition-all duration-500"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="flex justify-center px-4">
