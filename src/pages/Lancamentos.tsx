@@ -138,10 +138,10 @@ const Lancamentos = () => {
                 <ArrowRight className="h-6 w-6 text-accent hidden md:block" />
               </div>
               <div className="flex items-center gap-4">
-                <div className="px-6 py-4 rounded-xl bg-gradient-to-br from-amber-500/20 to-amber-500/5 border border-amber-500/30">
-                  <span className="text-xl md:text-2xl font-bold text-amber-400">Monetização</span>
+                <div className="px-6 py-4 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30">
+                  <span className="text-xl md:text-2xl font-bold text-primary">Monetização</span>
                 </div>
-                <ArrowRight className="h-6 w-6 text-amber-400 hidden md:block" />
+                <ArrowRight className="h-6 w-6 text-primary hidden md:block" />
               </div>
               <div className="px-6 py-4 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30">
                 <span className="text-xl md:text-2xl font-bold text-primary">Retenção</span>
