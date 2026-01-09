@@ -54,7 +54,16 @@ const Lancamentos = () => {
 
   return (
     <div className="min-h-screen dark">
-      <Navbar />
+      {/* Header */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-border/50">
+        <div className="container mx-auto px-4 py-4 flex justify-center">
+          <img 
+            src={logoEpice} 
+            alt="epice" 
+            className="h-10 md:h-12"
+          />
+        </div>
+      </header>
       
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">

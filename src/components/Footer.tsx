@@ -29,44 +29,7 @@ const Footer = () => {
         </div>
 
         {/* Middle section - Links */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12 max-w-4xl mx-auto">
-          {/* Services */}
-          <div className="text-center">
-            <h4 className="font-semibold mb-4 text-white text-lg">Serviços</h4>
-            <ul className="space-y-2">
-              <li>
-                <button onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })} className="text-gray-300 hover:text-primary transition-colors">
-                  Audiovisual
-                </button>
-              </li>
-              <li>
-                <button onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })} className="text-gray-300 hover:text-primary transition-colors">
-                  Design
-                </button>
-              </li>
-              <li>
-                <button onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })} className="text-gray-300 hover:text-primary transition-colors">
-                  Copywriting
-                </button>
-              </li>
-              <li>
-                <button onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })} className="text-gray-300 hover:text-primary transition-colors">
-                  Social Media
-                </button>
-              </li>
-              <li>
-                <button onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })} className="text-gray-300 hover:text-primary transition-colors">
-                  Tráfego Pago
-                </button>
-              </li>
-              <li>
-                <button onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })} className="text-gray-300 hover:text-primary transition-colors">
-                  Estratégia
-                </button>
-              </li>
-            </ul>
-          </div>
-
+        <div className="grid md:grid-cols-2 gap-8 mb-12 max-w-2xl mx-auto">
           {/* Company */}
           <div className="text-center">
             <h4 className="font-semibold mb-4 text-white text-lg">Empresa</h4>
