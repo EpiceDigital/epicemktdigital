@@ -98,14 +98,14 @@ const Lancamentos = () => {
       </section>
 
       {/* Qual nosso objetivo */}
-      <section className="relative py-16 bg-background">
+      <section className="relative pt-12 pb-20 bg-background">
         <div className="container mx-auto px-4 flex flex-col items-center">
           <motion.h2 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.5 }}
-            className="text-4xl md:text-5xl font-display font-bold mb-12 text-center"
+            className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-20 text-center"
           >
             <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
               Qual nosso objetivo?
