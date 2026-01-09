@@ -264,12 +264,6 @@ const Lancamentos = () => {
                 <div className="px-6 py-4 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30">
                   <span className="text-lg font-bold text-primary">Retenção</span>
                 </div>
-                <div className="flex items-center gap-2 mt-4 text-primary/70">
-                  <svg className="h-5 w-5 animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M17 11l-5-5-5 5M17 18l-5-5-5 5" />
-                  </svg>
-                  <span className="text-sm">ciclo contínuo</span>
-                </div>
               </div>
             </div>
             
