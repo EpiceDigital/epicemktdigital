@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight, Menu, X } from "lucide-react";
 import logoEpice from "@/assets/logo-epice.jpg";
 import cairoImg from "@/assets/specialist-cairo.jpg";
 import guilhermeImg from "@/assets/specialist-guilherme.jpg";
@@ -9,7 +9,7 @@ import marceloImg from "@/assets/specialist-marcelo.jpeg";
 import rodrigoImg from "@/assets/specialist-rodrigo.jpg";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import { useCallback, useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { motion } from "framer-motion";
 
@@ -23,6 +23,7 @@ const specialists = [
 ];
 
 const Lancamentos = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
     loop: true,
     align: "start",
@@ -50,33 +51,49 @@ const Lancamentos = () => {
   const scrollToContact = () => {
     const footer = document.querySelector('footer');
     footer?.scrollIntoView({ behavior: 'smooth' });
+    setMobileMenuOpen(false);
+  };
+
+  const scrollToSection = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    setMobileMenuOpen(false);
   };
 
   return (
     <div className="min-h-screen dark">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-border/50">
-        <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+        <div className="container mx-auto px-4 py-3 flex items-center justify-center relative">
+          {/* Mobile menu button */}
+          <button 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="absolute left-4 md:hidden text-gray-300 hover:text-primary transition-colors"
+          >
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+
           <img 
             src={logoEpice} 
             alt="epice" 
             className="h-8 md:h-10"
           />
-          <nav className="hidden md:flex items-center gap-8">
+          
+          {/* Desktop nav */}
+          <nav className="hidden md:flex items-center gap-8 absolute right-4">
             <button 
-              onClick={() => document.getElementById('objetivo')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => scrollToSection('objetivo')}
               className="text-gray-300 hover:text-primary transition-colors font-medium"
             >
               Objetivo
             </button>
             <button 
-              onClick={() => document.getElementById('metodologia')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => scrollToSection('metodologia')}
               className="text-gray-300 hover:text-primary transition-colors font-medium"
             >
               Metodologia
             </button>
             <button 
-              onClick={() => document.getElementById('especialistas')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => scrollToSection('especialistas')}
               className="text-gray-300 hover:text-primary transition-colors font-medium"
             >
               Especialistas
@@ -89,6 +106,38 @@ const Lancamentos = () => {
             </button>
           </nav>
         </div>
+
+        {/* Mobile menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-black/95 border-t border-border/50">
+            <nav className="container mx-auto px-4 py-4 flex flex-col gap-4">
+              <button 
+                onClick={() => scrollToSection('objetivo')}
+                className="text-gray-300 hover:text-primary transition-colors font-medium text-left py-2"
+              >
+                Objetivo
+              </button>
+              <button 
+                onClick={() => scrollToSection('metodologia')}
+                className="text-gray-300 hover:text-primary transition-colors font-medium text-left py-2"
+              >
+                Metodologia
+              </button>
+              <button 
+                onClick={() => scrollToSection('especialistas')}
+                className="text-gray-300 hover:text-primary transition-colors font-medium text-left py-2"
+              >
+                Especialistas
+              </button>
+              <button 
+                onClick={scrollToContact}
+                className="text-gray-300 hover:text-primary transition-colors font-medium text-left py-2"
+              >
+                Contato
+              </button>
+            </nav>
+          </div>
+        )}
       </header>
       
       {/* Hero Section */}
