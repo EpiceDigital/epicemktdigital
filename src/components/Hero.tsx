@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
+import logoEpice from "@/assets/logo-epice.jpg";
 import infinito from "@/assets/infinito.png";
-import AnimatedLogo from "./AnimatedLogo";
 
 const Hero = () => {
   return (
@@ -21,9 +21,13 @@ const Hero = () => {
           />
         </div>
 
-        {/* Animated Logo */}
-        <div className="mb-6 md:mb-8 relative z-10">
-          <AnimatedLogo />
+        {/* Logo */}
+        <div className="mb-6 md:mb-8 animate-in fade-in slide-in-from-top duration-700 relative z-10">
+          <img 
+            src={logoEpice} 
+            alt="epice" 
+            className="h-24 md:h-32 lg:h-40 mx-auto"
+          />
         </div>
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold mb-4 md:mb-6 px-2 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100 text-white leading-tight">
           Um departamento de marketing
