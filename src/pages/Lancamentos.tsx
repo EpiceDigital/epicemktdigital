@@ -96,31 +96,72 @@ const Lancamentos = () => {
         </div>
       </section>
 
-      {/* O que fazemos */}
+      {/* Qual nosso objetivo */}
       <section className="relative py-24 bg-background">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-8 text-center">
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-12 text-center">
             <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
-              O que nós fazemos?
+              Qual nosso objetivo?
             </span>
           </h2>
           
-          <div className="max-w-4xl mx-auto text-center space-y-6">
-            <p className="text-lg text-gray-300">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <p className="text-lg md:text-xl text-gray-300">
               Sabemos que cada especialista tem uma mensagem muito forte para espalhar para sua audiência.
             </p>
-            <p className="text-lg text-gray-300">
+            <p className="text-lg md:text-xl text-gray-300">
               Te ajudamos a potencializar o seu propósito, e com isso, construir uma marca pessoal escalável e lucrativa com infoprodutos.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Especialistas Carousel */}
+      {/* Metodologia */}
       <section className="relative py-24 bg-black">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-16 text-center text-white">
-            Especialistas que já impulsionamos
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-12 text-center text-white">
+            E claro, temos uma metodologia clara para perpetuar sua mensagem:
+          </h2>
+          
+          <div className="max-w-5xl mx-auto">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-center">
+              <div className="flex items-center gap-4">
+                <div className="px-6 py-4 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30">
+                  <span className="text-xl md:text-2xl font-bold text-primary">Captação</span>
+                </div>
+                <ArrowRight className="h-6 w-6 text-primary hidden md:block" />
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="px-6 py-4 rounded-xl bg-gradient-to-br from-accent/20 to-accent/5 border border-accent/30">
+                  <span className="text-xl md:text-2xl font-bold text-accent">Qualificação</span>
+                </div>
+                <ArrowRight className="h-6 w-6 text-accent hidden md:block" />
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="px-6 py-4 rounded-xl bg-gradient-to-br from-secondary/20 to-secondary/5 border border-secondary/30">
+                  <span className="text-xl md:text-2xl font-bold text-secondary">Monetização</span>
+                </div>
+                <ArrowRight className="h-6 w-6 text-secondary hidden md:block" />
+              </div>
+              <div className="px-6 py-4 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30">
+                <span className="text-xl md:text-2xl font-bold text-primary">Retenção</span>
+              </div>
+            </div>
+            
+            <p className="text-lg md:text-xl text-gray-300 text-center mt-12 max-w-3xl mx-auto">
+              Criamos uma estrutura que se retroalimenta, sempre gerando demanda qualificada, focando em vender e reter mais clientes dentro da sua base.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Especialistas Carousel */}
+      <section className="relative py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-16 text-center">
+            <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+              Especialistas que já impulsionamos
+            </span>
           </h2>
 
           <div className="relative max-w-6xl mx-auto">
@@ -176,15 +217,13 @@ const Lancamentos = () => {
       </section>
 
       {/* Por que ser lançado */}
-      <section className="relative py-24 bg-background">
+      <section className="relative py-24 bg-black">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-12 text-center">
-            <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
-              Por que ser lançado pela Epice?
-            </span>
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-12 text-center text-white">
+            Por que ser lançado pela <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">Epice?</span>
           </h2>
           
-          <div className="max-w-4xl mx-auto space-y-6 text-lg text-gray-300">
+          <div className="max-w-4xl mx-auto space-y-8 text-lg md:text-xl text-gray-300">
             <p>
               O crescimento da sua empresa de infoprodutos depende de quanto tempo você passa criando conteúdo e construindo sua audiência. Não há como fugir dessa realidade.
             </p>
@@ -192,7 +231,7 @@ const Lancamentos = () => {
               Toda hora que você gasta configurando sistemas, ajustando campanhas ou resolvendo problemas operacionais e estratégicos é uma hora que não está construindo relacionamento com quem realmente importa.
             </p>
             <p>
-              Nossa proposta é direta: assumimos tudo que não precisa ser feito por você. Estratégia, execução, otimização, suporte — cuidamos de cada detalhe para que você foque exclusivamente no que gera resultado. Sua mensagem e o seu propósito.
+              Nossa proposta é direta: assumimos tudo que não precisa ser feito por você. Estratégia, execução, otimização, suporte — cuidamos de cada detalhe para que você foque exclusivamente no que gera resultado. <strong className="text-white">Sua mensagem e o seu propósito.</strong>
             </p>
           </div>
 
