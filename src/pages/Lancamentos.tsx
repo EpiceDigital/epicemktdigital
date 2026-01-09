@@ -56,12 +56,38 @@ const Lancamentos = () => {
     <div className="min-h-screen dark">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-border/50">
-        <div className="container mx-auto px-4 py-4 flex justify-center">
+        <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <img 
             src={logoEpice} 
             alt="epice" 
-            className="h-10 md:h-12"
+            className="h-8 md:h-10"
           />
+          <nav className="hidden md:flex items-center gap-8">
+            <button 
+              onClick={() => document.getElementById('objetivo')?.scrollIntoView({ behavior: 'smooth' })}
+              className="text-gray-300 hover:text-primary transition-colors font-medium"
+            >
+              Objetivo
+            </button>
+            <button 
+              onClick={() => document.getElementById('metodologia')?.scrollIntoView({ behavior: 'smooth' })}
+              className="text-gray-300 hover:text-primary transition-colors font-medium"
+            >
+              Metodologia
+            </button>
+            <button 
+              onClick={() => document.getElementById('especialistas')?.scrollIntoView({ behavior: 'smooth' })}
+              className="text-gray-300 hover:text-primary transition-colors font-medium"
+            >
+              Especialistas
+            </button>
+            <button 
+              onClick={scrollToContact}
+              className="text-gray-300 hover:text-primary transition-colors font-medium"
+            >
+              Contato
+            </button>
+          </nav>
         </div>
       </header>
       
@@ -107,7 +133,7 @@ const Lancamentos = () => {
       </section>
 
       {/* Qual nosso objetivo */}
-      <section className="relative pt-12 pb-20 bg-background">
+      <section id="objetivo" className="relative pt-12 pb-20 bg-background">
         <div className="container mx-auto px-4 flex flex-col items-center">
           <motion.h2 
             initial={{ opacity: 0, y: 30 }}
@@ -133,7 +159,7 @@ const Lancamentos = () => {
       </section>
 
       {/* Metodologia */}
-      <section className="relative py-24 bg-black">
+      <section id="metodologia" className="relative py-24 bg-black">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-16 text-center text-white">
             E claro, temos uma metodologia clara para perpetuar sua mensagem:
@@ -284,7 +310,7 @@ const Lancamentos = () => {
       </section>
 
       {/* Especialistas Carousel */}
-      <section className="relative py-24 bg-background">
+      <section id="especialistas" className="relative py-24 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-16 text-center">
             <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
