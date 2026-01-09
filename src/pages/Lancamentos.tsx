@@ -98,8 +98,8 @@ const Lancamentos = () => {
 
       {/* Qual nosso objetivo */}
       <section className="relative py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-12 text-center">
+        <div className="container mx-auto px-4 flex flex-col items-center">
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-12 text-center animate-in fade-in duration-1000">
             <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
               Qual nosso objetivo?
             </span>
