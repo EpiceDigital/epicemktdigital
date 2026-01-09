@@ -119,36 +119,97 @@ const Lancamentos = () => {
       {/* Metodologia */}
       <section className="relative py-24 bg-black">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-12 text-center text-white">
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-16 text-center text-white">
             E claro, temos uma metodologia clara para perpetuar sua mensagem:
           </h2>
           
-          <div className="max-w-5xl mx-auto">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-center">
-              <div className="flex items-center gap-4">
+          <div className="max-w-4xl mx-auto">
+            {/* Circular Flow Layout */}
+            <div className="relative">
+              {/* Desktop: Circular layout */}
+              <div className="hidden md:block">
+                <div className="relative w-full aspect-square max-w-lg mx-auto">
+                  {/* Connecting circle/ring */}
+                  <div className="absolute inset-8 rounded-full border-2 border-primary/30 border-dashed" />
+                  
+                  {/* Arrows on the circle */}
+                  <div className="absolute top-8 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <ArrowRight className="h-5 w-5 text-primary rotate-90" />
+                  </div>
+                  <div className="absolute right-8 top-1/2 -translate-y-1/2 translate-x-1/2">
+                    <ArrowRight className="h-5 w-5 text-primary" />
+                  </div>
+                  <div className="absolute bottom-8 left-1/2 -translate-x-1/2 translate-y-1/2">
+                    <ArrowRight className="h-5 w-5 text-primary -rotate-90" />
+                  </div>
+                  <div className="absolute left-8 top-1/2 -translate-y-1/2 -translate-x-1/2">
+                    <ArrowRight className="h-5 w-5 text-primary rotate-180" />
+                  </div>
+                  
+                  {/* Top - Captação */}
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-4">
+                    <div className="px-6 py-4 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30 backdrop-blur-sm">
+                      <span className="text-xl font-bold text-primary">Captação</span>
+                    </div>
+                  </div>
+                  
+                  {/* Right - Qualificação */}
+                  <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4">
+                    <div className="px-6 py-4 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30 backdrop-blur-sm">
+                      <span className="text-xl font-bold text-primary">Qualificação</span>
+                    </div>
+                  </div>
+                  
+                  {/* Bottom - Monetização */}
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-4">
+                    <div className="px-6 py-4 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30 backdrop-blur-sm">
+                      <span className="text-xl font-bold text-primary">Monetização</span>
+                    </div>
+                  </div>
+                  
+                  {/* Left - Retenção */}
+                  <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4">
+                    <div className="px-6 py-4 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30 backdrop-blur-sm">
+                      <span className="text-xl font-bold text-primary">Retenção</span>
+                    </div>
+                  </div>
+                  
+                  {/* Center icon */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/30 to-primary/10 border border-primary/50 flex items-center justify-center">
+                      <svg className="w-8 h-8 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Mobile: Vertical flow with loop arrow */}
+              <div className="md:hidden flex flex-col items-center gap-4">
                 <div className="px-6 py-4 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30">
-                  <span className="text-xl md:text-2xl font-bold text-primary">Captação</span>
+                  <span className="text-lg font-bold text-primary">Captação</span>
                 </div>
-                <ArrowRight className="h-6 w-6 text-primary hidden md:block" />
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="px-6 py-4 rounded-xl bg-gradient-to-br from-accent/20 to-accent/5 border border-accent/30">
-                  <span className="text-xl md:text-2xl font-bold text-accent">Qualificação</span>
-                </div>
-                <ArrowRight className="h-6 w-6 text-accent hidden md:block" />
-              </div>
-              <div className="flex items-center gap-4">
+                <ArrowRight className="h-5 w-5 text-primary rotate-90" />
                 <div className="px-6 py-4 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30">
-                  <span className="text-xl md:text-2xl font-bold text-primary">Monetização</span>
+                  <span className="text-lg font-bold text-primary">Qualificação</span>
                 </div>
-                <ArrowRight className="h-6 w-6 text-primary hidden md:block" />
-              </div>
-              <div className="px-6 py-4 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30">
-                <span className="text-xl md:text-2xl font-bold text-primary">Retenção</span>
+                <ArrowRight className="h-5 w-5 text-primary rotate-90" />
+                <div className="px-6 py-4 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30">
+                  <span className="text-lg font-bold text-primary">Monetização</span>
+                </div>
+                <ArrowRight className="h-5 w-5 text-primary rotate-90" />
+                <div className="px-6 py-4 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30">
+                  <span className="text-lg font-bold text-primary">Retenção</span>
+                </div>
+                <div className="flex items-center gap-2 mt-2">
+                  <ArrowRight className="h-5 w-5 text-primary rotate-180" />
+                  <span className="text-sm text-primary/70">volta para Captação</span>
+                </div>
               </div>
             </div>
             
-            <p className="text-lg md:text-xl text-gray-300 text-center mt-12 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-300 text-center mt-16 max-w-3xl mx-auto">
               Criamos uma estrutura que se retroalimenta, sempre gerando demanda qualificada, focando em vender e reter mais clientes dentro da sua base.
             </p>
           </div>
