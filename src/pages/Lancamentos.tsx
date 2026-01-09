@@ -11,6 +11,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import { motion } from "framer-motion";
 
 const specialists = [
   { name: "Cairo Trader", handle: "@cairotrader", image: cairoImg },
@@ -97,13 +98,19 @@ const Lancamentos = () => {
       </section>
 
       {/* Qual nosso objetivo */}
-      <section className="relative py-24 bg-background">
+      <section className="relative py-16 bg-background">
         <div className="container mx-auto px-4 flex flex-col items-center">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-12 text-center animate-in fade-in duration-1000">
+          <motion.h2 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.5 }}
+            className="text-4xl md:text-5xl font-display font-bold mb-12 text-center"
+          >
             <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
               Qual nosso objetivo?
             </span>
-          </h2>
+          </motion.h2>
           
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <p className="text-lg md:text-xl text-gray-300">
