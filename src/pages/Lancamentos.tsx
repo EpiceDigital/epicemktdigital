@@ -126,79 +126,142 @@ const Lancamentos = () => {
           <div className="max-w-4xl mx-auto">
             {/* Circular Flow Layout */}
             <div className="relative">
-              {/* Desktop: Circular layout */}
+              {/* Desktop: Circular layout with SVG arrows */}
               <div className="hidden md:block">
                 <div className="relative w-full aspect-square max-w-lg mx-auto">
+                  {/* SVG Curved Arrows */}
+                  <svg 
+                    className="absolute inset-0 w-full h-full" 
+                    viewBox="0 0 400 400"
+                    style={{ transform: 'rotate(-45deg)' }}
+                  >
+                    <defs>
+                      <marker 
+                        id="arrowhead" 
+                        markerWidth="10" 
+                        markerHeight="7" 
+                        refX="9" 
+                        refY="3.5" 
+                        orient="auto"
+                      >
+                        <polygon 
+                          points="0 0, 10 3.5, 0 7" 
+                          fill="hsl(var(--primary))" 
+                        />
+                      </marker>
+                      <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.3" />
+                        <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="1" />
+                      </linearGradient>
+                    </defs>
+                    
+                    {/* Curved arrow 1: Top-right arc */}
+                    <path
+                      d="M 200 60 A 140 140 0 0 1 340 200"
+                      fill="none"
+                      stroke="url(#arrowGradient)"
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      markerEnd="url(#arrowhead)"
+                      className="animate-[pulse_2s_ease-in-out_infinite]"
+                      style={{ animationDelay: '0s' }}
+                    />
+                    
+                    {/* Curved arrow 2: Bottom-right arc */}
+                    <path
+                      d="M 340 200 A 140 140 0 0 1 200 340"
+                      fill="none"
+                      stroke="url(#arrowGradient)"
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      markerEnd="url(#arrowhead)"
+                      className="animate-[pulse_2s_ease-in-out_infinite]"
+                      style={{ animationDelay: '0.5s' }}
+                    />
+                    
+                    {/* Curved arrow 3: Bottom-left arc */}
+                    <path
+                      d="M 200 340 A 140 140 0 0 1 60 200"
+                      fill="none"
+                      stroke="url(#arrowGradient)"
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      markerEnd="url(#arrowhead)"
+                      className="animate-[pulse_2s_ease-in-out_infinite]"
+                      style={{ animationDelay: '1s' }}
+                    />
+                    
+                    {/* Curved arrow 4: Top-left arc */}
+                    <path
+                      d="M 60 200 A 140 140 0 0 1 200 60"
+                      fill="none"
+                      stroke="url(#arrowGradient)"
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      markerEnd="url(#arrowhead)"
+                      className="animate-[pulse_2s_ease-in-out_infinite]"
+                      style={{ animationDelay: '1.5s' }}
+                    />
+                  </svg>
+                  
                   {/* Top - Captação */}
                   <div className="absolute top-0 left-1/2 -translate-x-1/2">
-                    <div className="px-6 py-4 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30 backdrop-blur-sm">
+                    <div className="px-6 py-4 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30 backdrop-blur-sm bg-black/50">
                       <span className="text-xl font-bold text-primary">Captação</span>
                     </div>
                   </div>
                   
-                  {/* Arrow: Captação → Qualificação */}
-                  <div className="absolute top-[18%] right-[22%]">
-                    <ArrowRight className="h-6 w-6 text-primary rotate-45" />
-                  </div>
-                  
                   {/* Right - Qualificação */}
                   <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4">
-                    <div className="px-6 py-4 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30 backdrop-blur-sm">
+                    <div className="px-6 py-4 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30 backdrop-blur-sm bg-black/50">
                       <span className="text-xl font-bold text-primary">Qualificação</span>
                     </div>
                   </div>
                   
-                  {/* Arrow: Qualificação → Monetização */}
-                  <div className="absolute bottom-[18%] right-[22%]">
-                    <ArrowRight className="h-6 w-6 text-primary rotate-[135deg]" />
-                  </div>
-                  
                   {/* Bottom - Monetização */}
                   <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
-                    <div className="px-6 py-4 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30 backdrop-blur-sm">
+                    <div className="px-6 py-4 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30 backdrop-blur-sm bg-black/50">
                       <span className="text-xl font-bold text-primary">Monetização</span>
                     </div>
                   </div>
                   
-                  {/* Arrow: Monetização → Retenção */}
-                  <div className="absolute bottom-[18%] left-[22%]">
-                    <ArrowRight className="h-6 w-6 text-primary rotate-[225deg]" />
-                  </div>
-                  
                   {/* Left - Retenção */}
                   <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4">
-                    <div className="px-6 py-4 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30 backdrop-blur-sm">
+                    <div className="px-6 py-4 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30 backdrop-blur-sm bg-black/50">
                       <span className="text-xl font-bold text-primary">Retenção</span>
                     </div>
-                  </div>
-                  
-                  {/* Arrow: Retenção → Captação */}
-                  <div className="absolute top-[18%] left-[22%]">
-                    <ArrowRight className="h-6 w-6 text-primary -rotate-45" />
                   </div>
                 </div>
               </div>
               
-              {/* Mobile: Vertical flow with loop arrow */}
+              {/* Mobile: Vertical flow with loop indicator */}
               <div className="md:hidden flex flex-col items-center gap-4">
                 <div className="px-6 py-4 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30">
                   <span className="text-lg font-bold text-primary">Captação</span>
                 </div>
-                <ArrowRight className="h-5 w-5 text-primary rotate-90" />
+                <svg className="h-8 w-8 text-primary animate-bounce" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M12 5v14M19 12l-7 7-7-7" />
+                </svg>
                 <div className="px-6 py-4 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30">
                   <span className="text-lg font-bold text-primary">Qualificação</span>
                 </div>
-                <ArrowRight className="h-5 w-5 text-primary rotate-90" />
+                <svg className="h-8 w-8 text-primary animate-bounce" style={{ animationDelay: '0.2s' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M12 5v14M19 12l-7 7-7-7" />
+                </svg>
                 <div className="px-6 py-4 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30">
                   <span className="text-lg font-bold text-primary">Monetização</span>
                 </div>
-                <ArrowRight className="h-5 w-5 text-primary rotate-90" />
+                <svg className="h-8 w-8 text-primary animate-bounce" style={{ animationDelay: '0.4s' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M12 5v14M19 12l-7 7-7-7" />
+                </svg>
                 <div className="px-6 py-4 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30">
                   <span className="text-lg font-bold text-primary">Retenção</span>
                 </div>
-                <div className="flex items-center gap-2 mt-2">
-                  <ArrowRight className="h-5 w-5 text-primary rotate-180" />
-                  <span className="text-sm text-primary/70">volta para Captação</span>
+                <div className="flex items-center gap-2 mt-4 text-primary/70">
+                  <svg className="h-5 w-5 animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M17 11l-5-5-5 5M17 18l-5-5-5 5" />
+                  </svg>
+                  <span className="text-sm">ciclo contínuo</span>
                 </div>
               </div>
             </div>
