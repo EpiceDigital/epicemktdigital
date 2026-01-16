@@ -13,7 +13,7 @@ const Footer = () => {
             className="h-20 mx-auto mb-6"
           />
           <p className="text-gray-300 text-lg mb-6 max-w-2xl mx-auto">
-            Departamento de marketing 360° para sua empresa crescer.
+            Te ajudamos a impulsionar a sua mensagem
           </p>
           <div className="flex gap-4 justify-center">
             <a href="https://www.instagram.com/epicedigital/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-lg bg-muted hover:bg-primary/20 flex items-center justify-center transition-all group">
@@ -28,31 +28,9 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Middle section - Links */}
-        <div className="grid md:grid-cols-2 gap-8 mb-12 max-w-2xl mx-auto">
-          {/* Company */}
-          <div className="text-center">
-            <h4 className="font-semibold mb-4 text-white text-lg">Empresa</h4>
-            <ul className="space-y-2">
-              <li>
-                <button onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })} className="text-gray-300 hover:text-primary transition-colors">
-                  Sobre
-                </button>
-              </li>
-              <li>
-                <button onClick={() => document.getElementById('cases')?.scrollIntoView({ behavior: 'smooth' })} className="text-gray-300 hover:text-primary transition-colors">
-                  Cases
-                </button>
-              </li>
-              <li>
-                <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="text-gray-300 hover:text-primary transition-colors">
-                  Contato
-                </button>
-              </li>
-            </ul>
-          </div>
+        {/* Middle section - Contact */}
+        <div className="mb-12 max-w-md mx-auto">
 
-          {/* Contact */}
           <div className="text-center">
             <h4 className="font-semibold mb-4 text-white text-lg">Contato</h4>
             <ul className="space-y-2">
