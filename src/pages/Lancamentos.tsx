@@ -466,41 +466,42 @@ const Lancamentos = () => {
       </section>
 
       {/* Sobre Nós */}
-      <section id="sobre" className="relative bg-background overflow-hidden scroll-mt-24 md:scroll-mt-32">
-        {/* Background image container */}
-        <div className="relative h-[75vh] min-h-[600px] max-h-[900px]">
-          <img 
-            src={foundersImg} 
-            alt="Fundadores Epice" 
-            loading="lazy"
-            className="w-full h-full object-cover object-[50%_25%]"
-          />
-          {/* Gradient fade lower on the image */}
-          <div
-            className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent"
-            style={{ height: "clamp(50px, 6vh, 100px)" }}
-          />
-        </div>
+      <section id="sobre" className="relative bg-black overflow-hidden scroll-mt-24 md:scroll-mt-32 py-16 md:py-24">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+            {/* Image on the left */}
+            <div className="w-full lg:w-1/2 relative">
+              <div className="relative rounded-2xl overflow-hidden aspect-[4/5] max-h-[600px]">
+                <img 
+                  src={foundersImg} 
+                  alt="Fundadores Epice" 
+                  loading="lazy"
+                  className="w-full h-full object-cover object-[50%_25%]"
+                />
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+              </div>
+            </div>
 
-        {/* Content below the image */}
-        <div className="bg-black pt-16 md:pt-24 pb-12">
-          <div className="container mx-auto px-4">
-            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-center">
-              <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
-                Sobre nós
-              </span>
-            </h2>
-            
-            <div className="max-w-4xl mx-auto space-y-4 text-base md:text-lg text-gray-300 text-center">
-              <p>
-                Com mais de 3 anos no mercado, a Epice digital foi criada com o objetivo de impulsionar a mensagens de especialistas e produtores de conteúdo, auxiliando na criação de um ecossistema lucrativo de infoprodutos.
-              </p>
-              <p>
-                Usando marketing e gestão empresarial, utilizamos uma metodologia específica para perpetuar a mensagem de cada infoprodutor.
-              </p>
-              <p>
-                Acreditamos que com uma estratégia alinhada e a equipe certa, você consegue focar no que faz de melhor: mudar a vida das pessoas com sua mensagem e produto, e nós estamos aqui para te ajudar nisso.
-              </p>
+            {/* Content on the right */}
+            <div className="w-full lg:w-1/2 text-center lg:text-left">
+              <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
+                <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+                  Sobre nós
+                </span>
+              </h2>
+              
+              <div className="space-y-4 text-base md:text-lg text-gray-300">
+                <p>
+                  Com mais de 3 anos no mercado, a Epice digital foi criada com o objetivo de impulsionar a mensagens de especialistas e produtores de conteúdo, auxiliando na criação de um ecossistema lucrativo de infoprodutos.
+                </p>
+                <p>
+                  Usando marketing e gestão empresarial, utilizamos uma metodologia específica para perpetuar a mensagem de cada infoprodutor.
+                </p>
+                <p>
+                  Acreditamos que com uma estratégia alinhada e a equipe certa, você consegue focar no que faz de melhor: mudar a vida das pessoas com sua mensagem e produto, e nós estamos aqui para te ajudar nisso.
+                </p>
+              </div>
             </div>
           </div>
         </div>
