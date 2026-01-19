@@ -466,14 +466,14 @@ const Lancamentos = () => {
       </section>
 
       {/* Sobre Nós */}
-      <section id="sobre" className="relative bg-background overflow-hidden">
+      <section id="sobre" className="relative bg-background overflow-hidden scroll-mt-24 md:scroll-mt-32">
         {/* Background image container */}
         <div className="relative h-[75vh] min-h-[600px] max-h-[900px]">
           <img 
             src={foundersImg} 
             alt="Fundadores Epice" 
             loading="lazy"
-            className="w-full h-full object-cover object-top"
+            className="w-full h-full object-cover object-[50%_25%]"
           />
           {/* Gradient fade lower on the image */}
           <div
@@ -483,7 +483,7 @@ const Lancamentos = () => {
         </div>
 
         {/* Content below the image */}
-        <div className="bg-black pt-8 pb-12">
+        <div className="bg-black pt-16 md:pt-24 pb-12">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-center">
               <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
