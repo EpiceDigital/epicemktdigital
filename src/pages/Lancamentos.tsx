@@ -466,7 +466,7 @@ const Lancamentos = () => {
       </section>
 
       {/* Sobre Nós */}
-      <section id="sobre" className="relative min-h-[800px] md:min-h-[900px] bg-background overflow-hidden">
+      <section id="sobre" className="relative min-h-[900px] md:min-h-[1000px] bg-background overflow-hidden">
         {/* Background image - full section */}
         <div className="absolute inset-0">
           <img 
@@ -474,33 +474,35 @@ const Lancamentos = () => {
             alt="Fundadores Epice" 
             className="w-full h-full object-cover object-top"
           />
-          {/* Gradient fade from top covering until chest level */}
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-transparent" style={{ height: '45%' }} />
         </div>
 
-        {/* Content positioned at top */}
-        <div className="container mx-auto px-4 relative z-10 pt-24 pb-12">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-12 text-center">
-            <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
-              Sobre nós
-            </span>
-          </h2>
+        {/* Content positioned at bottom, over the chest area */}
+        <div className="absolute bottom-0 left-0 right-0 z-10">
+          {/* Gradient fade starting from text area going up slightly */}
+          <div className="absolute bottom-full left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent" />
           
-          <div className="max-w-4xl mx-auto space-y-8 text-lg md:text-xl text-gray-300 text-center">
-            <p>
-              Com mais de 3 anos no mercado, a Epice digital foi criada com o objetivo de impulsionar a mensagens de especialistas e produtores de conteúdo, auxiliando na criação de um ecossistema lucrativo de infoprodutos.
-            </p>
-            <p>
-              Usando marketing e gestão empresarial, utilizamos uma metodologia específica para perpetuar a mensagem de cada infoprodutor.
-            </p>
-            <p>
-              Acreditamos que com uma estratégia alinhada e a equipe certa, você consegue focar no que faz de melhor: mudar a vida das pessoas com sua mensagem e produto, e nós estamos aqui para te ajudar nisso.
-            </p>
+          <div className="bg-black pt-8 pb-16">
+            <div className="container mx-auto px-4">
+              <h2 className="text-4xl md:text-5xl font-display font-bold mb-8 text-center">
+                <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+                  Sobre nós
+                </span>
+              </h2>
+              
+              <div className="max-w-4xl mx-auto space-y-6 text-lg md:text-xl text-gray-300 text-center">
+                <p>
+                  Com mais de 3 anos no mercado, a Epice digital foi criada com o objetivo de impulsionar a mensagens de especialistas e produtores de conteúdo, auxiliando na criação de um ecossistema lucrativo de infoprodutos.
+                </p>
+                <p>
+                  Usando marketing e gestão empresarial, utilizamos uma metodologia específica para perpetuar a mensagem de cada infoprodutor.
+                </p>
+                <p>
+                  Acreditamos que com uma estratégia alinhada e a equipe certa, você consegue focar no que faz de melhor: mudar a vida das pessoas com sua mensagem e produto, e nós estamos aqui para te ajudar nisso.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-
-        {/* Black fade from waist/chest level down */}
-        <div className="absolute bottom-0 left-0 right-0 h-[35%] bg-gradient-to-t from-black via-black/90 to-transparent" />
       </section>
 
       <Footer />
