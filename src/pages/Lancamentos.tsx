@@ -476,7 +476,7 @@ const Lancamentos = () => {
                   src={foundersImg} 
                   alt="Fundadores Epice" 
                   loading="lazy"
-                  className="w-full h-full object-cover object-[50%_25%]"
+                  className="w-full h-full object-cover object-center"
                 />
                 {/* Gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
