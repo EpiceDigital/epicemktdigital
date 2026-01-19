@@ -466,8 +466,20 @@ const Lancamentos = () => {
       </section>
 
       {/* Sobre Nós */}
-      <section id="sobre" className="relative py-24 bg-background overflow-hidden">
-        <div className="container mx-auto px-4 relative z-10">
+      <section id="sobre" className="relative min-h-[800px] md:min-h-[900px] bg-background overflow-hidden">
+        {/* Background image - full section */}
+        <div className="absolute inset-0">
+          <img 
+            src={foundersImg} 
+            alt="Fundadores Epice" 
+            className="w-full h-full object-cover object-top"
+          />
+          {/* Gradient fade from top covering until chest level */}
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-transparent" style={{ height: '45%' }} />
+        </div>
+
+        {/* Content positioned at top */}
+        <div className="container mx-auto px-4 relative z-10 pt-24 pb-12">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-12 text-center">
             <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
               Sobre nós
@@ -487,18 +499,8 @@ const Lancamentos = () => {
           </div>
         </div>
 
-        {/* Background image with fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-[400px] md:h-[500px]">
-          <img 
-            src={foundersImg} 
-            alt="Fundadores Epice" 
-            className="w-full h-full object-cover object-top"
-          />
-          {/* Black gradient fade from top */}
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/70 to-transparent" />
-          {/* Black gradient fade at waist level */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" style={{ top: '50%' }} />
-        </div>
+        {/* Black fade from waist/chest level down */}
+        <div className="absolute bottom-0 left-0 right-0 h-[35%] bg-gradient-to-t from-black via-black/90 to-transparent" />
       </section>
 
       <Footer />
