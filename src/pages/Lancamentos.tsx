@@ -466,7 +466,7 @@ const Lancamentos = () => {
       </section>
 
       {/* Sobre Nós */}
-      <section id="sobre" className="relative min-h-[900px] md:min-h-[1000px] bg-background overflow-hidden">
+      <section id="sobre" className="relative min-h-[700px] md:min-h-[800px] bg-background overflow-hidden">
         {/* Background image - full section */}
         <div className="absolute inset-0">
           <img 
@@ -476,20 +476,20 @@ const Lancamentos = () => {
           />
         </div>
 
-        {/* Content positioned at bottom, over the chest area */}
-        <div className="absolute bottom-0 left-0 right-0 z-10">
-          {/* Gradient fade starting from text area going up slightly */}
-          <div className="absolute bottom-full left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent" />
+        {/* Content positioned at bottom */}
+        <div className="absolute bottom-0 left-0 right-0 z-10 translate-y-[1px]">
+          {/* Gradient fade starting from text area going up */}
+          <div className="absolute bottom-full left-0 right-0 h-24 bg-gradient-to-t from-black to-transparent" />
           
-          <div className="bg-black pt-8 pb-16">
+          <div className="bg-black pt-6 pb-12">
             <div className="container mx-auto px-4">
-              <h2 className="text-4xl md:text-5xl font-display font-bold mb-8 text-center">
+              <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-center">
                 <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
                   Sobre nós
                 </span>
               </h2>
               
-              <div className="max-w-4xl mx-auto space-y-6 text-lg md:text-xl text-gray-300 text-center">
+              <div className="max-w-4xl mx-auto space-y-4 text-base md:text-lg text-gray-300 text-center">
                 <p>
                   Com mais de 3 anos no mercado, a Epice digital foi criada com o objetivo de impulsionar a mensagens de especialistas e produtores de conteúdo, auxiliando na criação de um ecossistema lucrativo de infoprodutos.
                 </p>
