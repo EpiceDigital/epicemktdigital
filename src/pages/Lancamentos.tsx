@@ -468,14 +468,18 @@ const Lancamentos = () => {
       {/* Sobre Nós */}
       <section id="sobre" className="relative bg-background overflow-hidden">
         {/* Background image container */}
-        <div className="relative">
+        <div className="relative h-[60vh] min-h-[520px] max-h-[760px]">
           <img 
             src={foundersImg} 
             alt="Fundadores Epice" 
-            className="w-full h-auto object-cover"
+            loading="lazy"
+            className="w-full h-full object-cover object-top"
           />
-          {/* Gradient fade at belly level */}
-          <div className="absolute bottom-0 left-0 right-0 h-[30%] bg-gradient-to-t from-black to-transparent" />
+          {/* Gradient fade at belly level (clamped to avoid covering faces) */}
+          <div
+            className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent"
+            style={{ height: "clamp(180px, 22vh, 320px)" }}
+          />
         </div>
 
         {/* Content below the image */}
