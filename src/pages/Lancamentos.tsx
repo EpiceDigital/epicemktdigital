@@ -468,7 +468,7 @@ const Lancamentos = () => {
       {/* Sobre Nós */}
       <section id="sobre" className="relative bg-background overflow-hidden">
         {/* Background image container */}
-        <div className="relative h-[60vh] min-h-[520px] max-h-[760px]">
+        <div className="relative h-[75vh] min-h-[600px] max-h-[900px]">
           <img 
             src={foundersImg} 
             alt="Fundadores Epice" 
