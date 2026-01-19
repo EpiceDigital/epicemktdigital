@@ -471,7 +471,7 @@ const Lancamentos = () => {
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
             {/* Image on the left */}
             <div className="w-full lg:w-1/2 relative">
-              <div className="relative rounded-2xl overflow-hidden aspect-[4/5] max-h-[600px]">
+              <div className="relative rounded-2xl overflow-hidden aspect-[3/2]">
                 <img 
                   src={foundersImg} 
                   alt="Fundadores Epice" 
