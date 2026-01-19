@@ -475,10 +475,10 @@ const Lancamentos = () => {
             loading="lazy"
             className="w-full h-full object-cover object-top"
           />
-          {/* Gradient fade at belly level (clamped to avoid covering faces) */}
+          {/* Gradient fade lower on the image */}
           <div
             className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent"
-            style={{ height: "clamp(180px, 22vh, 320px)" }}
+            style={{ height: "clamp(100px, 12vh, 180px)" }}
           />
         </div>
 
