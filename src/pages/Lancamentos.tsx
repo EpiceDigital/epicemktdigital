@@ -478,7 +478,7 @@ const Lancamentos = () => {
           {/* Gradient fade lower on the image */}
           <div
             className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent"
-            style={{ height: "clamp(50px, 6vh, 100px)" }}
+            style={{ height: "clamp(20px, 2vh, 40px)" }}
           />
         </div>
 
