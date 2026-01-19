@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronLeft, ChevronRight, Menu, X } from "lucide-react";
 import logoEpice from "@/assets/logo-epice.jpg";
+import foundersImg from "@/assets/founders.jpeg";
 import cairoImg from "@/assets/specialist-cairo.jpg";
 import guilhermeImg from "@/assets/specialist-guilherme.jpg";
 import isaImg from "@/assets/specialist-isa.jpg";
@@ -99,6 +100,12 @@ const Lancamentos = () => {
               Especialistas
             </button>
             <button 
+              onClick={() => scrollToSection('sobre')}
+              className="text-gray-300 hover:text-primary transition-colors font-medium"
+            >
+              Sobre nós
+            </button>
+            <button 
               onClick={scrollToContact}
               className="text-gray-300 hover:text-primary transition-colors font-medium"
             >
@@ -128,6 +135,12 @@ const Lancamentos = () => {
                 className="text-gray-300 hover:text-primary transition-colors font-medium text-left py-2"
               >
                 Especialistas
+              </button>
+              <button 
+                onClick={() => scrollToSection('sobre')}
+                className="text-gray-300 hover:text-primary transition-colors font-medium text-left py-2"
+              >
+                Sobre nós
               </button>
               <button 
                 onClick={scrollToContact}
@@ -449,6 +462,42 @@ const Lancamentos = () => {
               <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
+        </div>
+      </section>
+
+      {/* Sobre Nós */}
+      <section id="sobre" className="relative py-24 bg-background overflow-hidden">
+        <div className="container mx-auto px-4 relative z-10">
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-12 text-center">
+            <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+              Sobre nós
+            </span>
+          </h2>
+          
+          <div className="max-w-4xl mx-auto space-y-8 text-lg md:text-xl text-gray-300 text-center">
+            <p>
+              Com mais de 3 anos no mercado, a Epice digital foi criada com o objetivo de impulsionar a mensagens de especialistas e produtores de conteúdo, auxiliando na criação de um ecossistema lucrativo de infoprodutos.
+            </p>
+            <p>
+              Usando marketing e gestão empresarial, utilizamos uma metodologia específica para perpetuar a mensagem de cada infoprodutor.
+            </p>
+            <p>
+              Acreditamos que com uma estratégia alinhada e a equipe certa, você consegue focar no que faz de melhor: mudar a vida das pessoas com sua mensagem e produto, e nós estamos aqui para te ajudar nisso.
+            </p>
+          </div>
+        </div>
+
+        {/* Background image with fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-[400px] md:h-[500px]">
+          <img 
+            src={foundersImg} 
+            alt="Fundadores Epice" 
+            className="w-full h-full object-cover object-top"
+          />
+          {/* Black gradient fade from top */}
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/70 to-transparent" />
+          {/* Black gradient fade at waist level */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" style={{ top: '50%' }} />
         </div>
       </section>
 
